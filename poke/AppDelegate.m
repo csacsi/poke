@@ -15,13 +15,13 @@
 {
     // Override point for customization after application launch.
     
-    RootViewController* rootview = [[RootViewController alloc] init];
+    self.rootViewController = [[RootViewController alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
-    self.window.rootViewController = rootview;
+    self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
