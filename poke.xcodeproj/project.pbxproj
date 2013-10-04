@@ -13,15 +13,34 @@
 		F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F23AD96117FF17DB00C181FF /* InfoPlist.strings */; };
 		F23AD96517FF17DB00C181FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD96417FF17DB00C181FF /* main.m */; };
 		F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD96817FF17DB00C181FF /* AppDelegate.m */; };
-		F23AD96C17FF17DB00C181FF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23AD96A17FF17DB00C181FF /* Main_iPhone.storyboard */; };
-		F23AD96F17FF17DB00C181FF /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23AD96D17FF17DB00C181FF /* Main_iPad.storyboard */; };
-		F23AD97217FF17DB00C181FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD97117FF17DB00C181FF /* ViewController.m */; };
 		F23AD97417FF17DB00C181FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23AD97317FF17DB00C181FF /* Images.xcassets */; };
 		F23AD97B17FF17DC00C181FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD97A17FF17DC00C181FF /* XCTest.framework */; };
 		F23AD97C17FF17DC00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD97D17FF17DC00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
 		F23AD98517FF17DC00C181FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F23AD98317FF17DC00C181FF /* InfoPlist.strings */; };
 		F23AD98717FF17DC00C181FF /* pokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD98617FF17DC00C181FF /* pokeTests.m */; };
+		F23AD99317FF1A0500C181FF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD99117FF1A0500C181FF /* Parse.framework */; };
+		F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99617FF1A2400C181FF /* BaseDataObject.m */; };
+		F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */; };
+		F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */; };
+		F23AD9A517FF1A2400C181FF /* OOSQLiteWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */; };
+		F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9A717FF1A4600C181FF /* RootViewController.m */; };
+		F23AD9B417FF1AD300C181FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AA17FF1AD300C181FF /* AdSupport.framework */; };
+		F23AD9B517FF1AD300C181FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AB17FF1AD300C181FF /* AVFoundation.framework */; };
+		F23AD9B617FF1AD300C181FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AC17FF1AD300C181FF /* CFNetwork.framework */; };
+		F23AD9B717FF1AD300C181FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AD17FF1AD300C181FF /* CoreData.framework */; };
+		F23AD9B817FF1AD300C181FF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AE17FF1AD300C181FF /* CoreFoundation.framework */; };
+		F23AD9B917FF1AD300C181FF /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AF17FF1AD300C181FF /* EventKit.framework */; };
+		F23AD9BA17FF1AD300C181FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9B017FF1AD300C181FF /* Security.framework */; };
+		F23AD9BB17FF1AD300C181FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9B117FF1AD300C181FF /* Social.framework */; };
+		F23AD9BC17FF1AD300C181FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9B217FF1AD300C181FF /* StoreKit.framework */; };
+		F23AD9BD17FF1AD300C181FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9B317FF1AD300C181FF /* SystemConfiguration.framework */; };
+		F23AD9BF17FF1D5100C181FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9BE17FF1D5100C181FF /* AudioToolbox.framework */; };
+		F23AD9C117FF1DA700C181FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C017FF1DA700C181FF /* CoreLocation.framework */; };
+		F23AD9C317FF1DB000C181FF /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C217FF1DB000C181FF /* libz.1.1.3.dylib */; };
+		F23AD9C517FF1DB900C181FF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C417FF1DB900C181FF /* MobileCoreServices.framework */; };
+		F23AD9C717FF1DC300C181FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C617FF1DC300C181FF /* QuartzCore.framework */; };
+		F23AD9C917FF1E7100C181FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +64,42 @@
 		F23AD96617FF17DB00C181FF /* poke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poke-Prefix.pch"; sourceTree = "<group>"; };
 		F23AD96717FF17DB00C181FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F23AD96817FF17DB00C181FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F23AD96B17FF17DB00C181FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		F23AD96E17FF17DB00C181FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		F23AD97017FF17DB00C181FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F23AD97117FF17DB00C181FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F23AD97317FF17DB00C181FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F23AD97917FF17DC00C181FF /* pokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD97A17FF17DC00C181FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F23AD98217FF17DC00C181FF /* pokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pokeTests-Info.plist"; sourceTree = "<group>"; };
 		F23AD98417FF17DC00C181FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F23AD98617FF17DC00C181FF /* pokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pokeTests.m; sourceTree = "<group>"; };
+		F23AD99117FF1A0500C181FF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = poke/Parse.framework; sourceTree = "<group>"; };
+		F23AD99517FF1A2400C181FF /* BaseDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataObject.h; sourceTree = "<group>"; };
+		F23AD99617FF1A2400C181FF /* BaseDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataObject.m; sourceTree = "<group>"; };
+		F23AD99717FF1A2400C181FF /* DataRowProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRowProtocoll.h; sourceTree = "<group>"; };
+		F23AD99917FF1A2400C181FF /* CustomMappingProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMappingProtocoll.h; sourceTree = "<group>"; };
+		F23AD99A17FF1A2400C181FF /* ParseDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDataHandler.h; sourceTree = "<group>"; };
+		F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDataHandler.m; sourceTree = "<group>"; };
+		F23AD99C17FF1A2400C181FF /* ParseObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseObjectHelper.h; sourceTree = "<group>"; };
+		F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseObjectHelper.m; sourceTree = "<group>"; };
+		F23AD99F17FF1A2400C181FF /* DataLoaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoaderProtocol.h; sourceTree = "<group>"; };
+		F23AD9A017FF1A2400C181FF /* OOSQLiteWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSQLiteWrapper.h; sourceTree = "<group>"; };
+		F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOSQLiteWrapper.m; sourceTree = "<group>"; };
+		F23AD9A617FF1A4600C181FF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F23AD9A717FF1A4600C181FF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F23AD9AA17FF1AD300C181FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F23AD9AB17FF1AD300C181FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F23AD9AC17FF1AD300C181FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F23AD9AD17FF1AD300C181FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F23AD9AE17FF1AD300C181FF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F23AD9AF17FF1AD300C181FF /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		F23AD9B017FF1AD300C181FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F23AD9B117FF1AD300C181FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F23AD9B217FF1AD300C181FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F23AD9B317FF1AD300C181FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F23AD9BE17FF1D5100C181FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F23AD9C017FF1DA700C181FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F23AD9C217FF1DB000C181FF /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		F23AD9C417FF1DB900C181FF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F23AD9C617FF1DC300C181FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +107,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */,
-				F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */,
+				F23AD9C917FF1E7100C181FF /* libsqlite3.dylib in Frameworks */,
+				F23AD9BD17FF1AD300C181FF /* SystemConfiguration.framework in Frameworks */,
+				F23AD9BC17FF1AD300C181FF /* StoreKit.framework in Frameworks */,
+				F23AD9C717FF1DC300C181FF /* QuartzCore.framework in Frameworks */,
+				F23AD9C517FF1DB900C181FF /* MobileCoreServices.framework in Frameworks */,
+				F23AD9C317FF1DB000C181FF /* libz.1.1.3.dylib in Frameworks */,
+				F23AD9C117FF1DA700C181FF /* CoreLocation.framework in Frameworks */,
+				F23AD9BF17FF1D5100C181FF /* AudioToolbox.framework in Frameworks */,
+				F23AD9B417FF1AD300C181FF /* AdSupport.framework in Frameworks */,
+				F23AD9B517FF1AD300C181FF /* AVFoundation.framework in Frameworks */,
+				F23AD9B617FF1AD300C181FF /* CFNetwork.framework in Frameworks */,
+				F23AD9B717FF1AD300C181FF /* CoreData.framework in Frameworks */,
+				F23AD9B817FF1AD300C181FF /* CoreFoundation.framework in Frameworks */,
+				F23AD9B917FF1AD300C181FF /* EventKit.framework in Frameworks */,
+				F23AD9BA17FF1AD300C181FF /* Security.framework in Frameworks */,
+				F23AD9BB17FF1AD300C181FF /* Social.framework in Frameworks */,
 				F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */,
+				F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */,
+				F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */,
+				F23AD99317FF1A0500C181FF /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +165,23 @@
 		F23AD95717FF17DB00C181FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */,
+				F23AD9C617FF1DC300C181FF /* QuartzCore.framework */,
+				F23AD9C417FF1DB900C181FF /* MobileCoreServices.framework */,
+				F23AD9C217FF1DB000C181FF /* libz.1.1.3.dylib */,
+				F23AD9C017FF1DA700C181FF /* CoreLocation.framework */,
+				F23AD9BE17FF1D5100C181FF /* AudioToolbox.framework */,
+				F23AD9AA17FF1AD300C181FF /* AdSupport.framework */,
+				F23AD9AB17FF1AD300C181FF /* AVFoundation.framework */,
+				F23AD9AC17FF1AD300C181FF /* CFNetwork.framework */,
+				F23AD9AD17FF1AD300C181FF /* CoreData.framework */,
+				F23AD9AE17FF1AD300C181FF /* CoreFoundation.framework */,
+				F23AD9AF17FF1AD300C181FF /* EventKit.framework */,
+				F23AD9B017FF1AD300C181FF /* Security.framework */,
+				F23AD9B117FF1AD300C181FF /* Social.framework */,
+				F23AD9B217FF1AD300C181FF /* StoreKit.framework */,
+				F23AD9B317FF1AD300C181FF /* SystemConfiguration.framework */,
+				F23AD99117FF1A0500C181FF /* Parse.framework */,
 				F23AD95817FF17DB00C181FF /* Foundation.framework */,
 				F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */,
 				F23AD95C17FF17DB00C181FF /* UIKit.framework */,
@@ -114,12 +193,10 @@
 		F23AD95E17FF17DB00C181FF /* poke */ = {
 			isa = PBXGroup;
 			children = (
+				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
-				F23AD96A17FF17DB00C181FF /* Main_iPhone.storyboard */,
-				F23AD96D17FF17DB00C181FF /* Main_iPad.storyboard */,
-				F23AD97017FF17DB00C181FF /* ViewController.h */,
-				F23AD97117FF17DB00C181FF /* ViewController.m */,
+				F23AD9A917FF1A4B00C181FF /* ViewControllers */,
 				F23AD97317FF17DB00C181FF /* Images.xcassets */,
 				F23AD95F17FF17DB00C181FF /* Supporting Files */,
 			);
@@ -153,6 +230,49 @@
 				F23AD98317FF17DC00C181FF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F23AD99417FF1A2400C181FF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD99517FF1A2400C181FF /* BaseDataObject.h */,
+				F23AD99617FF1A2400C181FF /* BaseDataObject.m */,
+				F23AD99717FF1A2400C181FF /* DataRowProtocoll.h */,
+				F23AD99817FF1A2400C181FF /* Parse */,
+				F23AD99E17FF1A2400C181FF /* SQLite */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F23AD99817FF1A2400C181FF /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD99917FF1A2400C181FF /* CustomMappingProtocoll.h */,
+				F23AD99A17FF1A2400C181FF /* ParseDataHandler.h */,
+				F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */,
+				F23AD99C17FF1A2400C181FF /* ParseObjectHelper.h */,
+				F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		F23AD99E17FF1A2400C181FF /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD99F17FF1A2400C181FF /* DataLoaderProtocol.h */,
+				F23AD9A017FF1A2400C181FF /* OOSQLiteWrapper.h */,
+				F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		F23AD9A917FF1A4B00C181FF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9A617FF1A4600C181FF /* RootViewController.h */,
+				F23AD9A717FF1A4600C181FF /* RootViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23AD96F17FF17DB00C181FF /* Main_iPad.storyboard in Resources */,
 				F23AD97417FF17DB00C181FF /* Images.xcassets in Resources */,
-				F23AD96C17FF17DB00C181FF /* Main_iPhone.storyboard in Resources */,
 				F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,9 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23AD97217FF17DB00C181FF /* ViewController.m in Sources */,
+				F23AD9A517FF1A2400C181FF /* OOSQLiteWrapper.m in Sources */,
+				F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */,
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
+				F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */,
+				F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */,
+				F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,22 +406,6 @@
 				F23AD96217FF17DB00C181FF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F23AD96A17FF17DB00C181FF /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F23AD96B17FF17DB00C181FF /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		F23AD96D17FF17DB00C181FF /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F23AD96E17FF17DB00C181FF /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		F23AD98317FF17DC00C181FF /* InfoPlist.strings */ = {
@@ -392,6 +498,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/csacsika/Documents/OldDropbox/DEV/DistinctionHackaton/poke/poke,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "poke/poke-Prefix.pch";
 				INFOPLIST_FILE = "poke/poke-Info.plist";
@@ -405,6 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/csacsika/Documents/OldDropbox/DEV/DistinctionHackaton/poke/poke,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "poke/poke-Prefix.pch";
 				INFOPLIST_FILE = "poke/poke-Info.plist";
