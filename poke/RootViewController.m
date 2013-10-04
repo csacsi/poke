@@ -25,7 +25,6 @@
         [self.view setBackgroundColor:[UIColor redColor]];
         tbl = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         [tbl setDataSource:self];
-        [tbl setContentInset:UIEdgeInsetsMake(60, 0, 0, 0)];
         [tbl  setDelegate:self];
         [self.view addSubview:tbl];
         [tbl registerClass:[MainTableCell class] forCellReuseIdentifier:@"mainCell"];
@@ -72,10 +71,5 @@
     [cell setText:list[indexPath.row]];
     
     return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"tableview selected:%d",indexPath.row);
 }
 @end
