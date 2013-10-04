@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface RootViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface RootViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate>
 {
     UITableView*tbl;
     
