@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E898828017FF2E4500180448 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = E898827F17FF2E4500180448 /* Friend.m */; };
+		E898828417FF2EC800180448 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828317FF2EC800180448 /* Profile.m */; };
+		E898828A17FF2F4E00180448 /* LendInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828917FF2F4E00180448 /* LendInteraction.m */; };
 		F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */; };
 		F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
@@ -54,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E898827E17FF2E4500180448 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Model/Friend.h; sourceTree = "<group>"; };
+		E898827F17FF2E4500180448 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Model/Friend.m; sourceTree = "<group>"; };
+		E898828217FF2EC800180448 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/Profile.h; sourceTree = "<group>"; };
+		E898828317FF2EC800180448 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/Profile.m; sourceTree = "<group>"; };
+		E898828817FF2F4E00180448 /* LendInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendInteraction.h; sourceTree = "<group>"; };
+		E898828917FF2F4E00180448 /* LendInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendInteraction.m; sourceTree = "<group>"; };
 		F23AD95517FF17DB00C181FF /* poke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD95817FF17DB00C181FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +152,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E898828117FF2E4D00180448 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E898827E17FF2E4500180448 /* Friend.h */,
+				E898827F17FF2E4500180448 /* Friend.m */,
+				E898828217FF2EC800180448 /* Profile.h */,
+				E898828317FF2EC800180448 /* Profile.m */,
+				E898828817FF2F4E00180448 /* LendInteraction.h */,
+				E898828917FF2F4E00180448 /* LendInteraction.m */,
+			);
+			name = Model;
+			path = Data;
+			sourceTree = "<group>";
+		};
 		F23AD94C17FF17DB00C181FF = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +216,7 @@
 		F23AD95E17FF17DB00C181FF /* poke */ = {
 			isa = PBXGroup;
 			children = (
+				E898828117FF2E4D00180448 /* Model */,
 				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
@@ -374,8 +398,11 @@
 				F23AD9A517FF1A2400C181FF /* OOSQLiteWrapper.m in Sources */,
 				F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */,
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
+				E898828417FF2EC800180448 /* Profile.m in Sources */,
+				E898828017FF2E4500180448 /* Friend.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
 				F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */,
+				E898828A17FF2F4E00180448 /* LendInteraction.m in Sources */,
 				F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */,
 				F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */,
 			);
@@ -588,6 +615,7 @@
 				F23AD98C17FF17DC00C181FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F23AD98D17FF17DC00C181FF /* Build configuration list for PBXNativeTarget "pokeTests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +624,7 @@
 				F23AD98F17FF17DC00C181FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
