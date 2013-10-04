@@ -10,6 +10,7 @@
 		E898828017FF2E4500180448 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = E898827F17FF2E4500180448 /* Friend.m */; };
 		E898828417FF2EC800180448 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828317FF2EC800180448 /* Profile.m */; };
 		E898828A17FF2F4E00180448 /* LendInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828917FF2F4E00180448 /* LendInteraction.m */; };
+		E89882C417FF391800180448 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89882C317FF391800180448 /* Parse.framework */; };
 		F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */; };
 		F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
@@ -64,6 +65,7 @@
 		E898828317FF2EC800180448 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/Profile.m; sourceTree = "<group>"; };
 		E898828817FF2F4E00180448 /* LendInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendInteraction.h; sourceTree = "<group>"; };
 		E898828917FF2F4E00180448 /* LendInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendInteraction.m; sourceTree = "<group>"; };
+		E89882C317FF391800180448 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = poke/Parse.framework; sourceTree = "<group>"; };
 		F23AD95517FF17DB00C181FF /* poke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD95817FF17DB00C181FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +127,7 @@
 				F23AD9C717FF1DC300C181FF /* QuartzCore.framework in Frameworks */,
 				F23AD9C517FF1DB900C181FF /* MobileCoreServices.framework in Frameworks */,
 				F23AD9C317FF1DB000C181FF /* libz.1.1.3.dylib in Frameworks */,
+				E89882C417FF391800180448 /* Parse.framework in Frameworks */,
 				F23AD9C117FF1DA700C181FF /* CoreLocation.framework in Frameworks */,
 				F23AD9BF17FF1D5100C181FF /* AudioToolbox.framework in Frameworks */,
 				F23AD9B417FF1AD300C181FF /* AdSupport.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		F23AD94C17FF17DB00C181FF = {
 			isa = PBXGroup;
 			children = (
+				E89882C317FF391800180448 /* Parse.framework */,
 				F23AD95E17FF17DB00C181FF /* poke */,
 				F23AD98017FF17DC00C181FF /* pokeTests */,
 				F23AD95717FF17DB00C181FF /* Frameworks */,
@@ -550,11 +554,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/csacsika/Documents/OldDropbox/DEV/DistinctionHackaton/poke/poke,
+					/Users/csomakk/poke/poke,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "poke/poke-Prefix.pch";
 				INFOPLIST_FILE = "poke/poke-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -567,11 +573,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/csacsika/Documents/OldDropbox/DEV/DistinctionHackaton/poke/poke,
+					/Users/csomakk/poke/poke,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "poke/poke-Prefix.pch";
 				INFOPLIST_FILE = "poke/poke-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

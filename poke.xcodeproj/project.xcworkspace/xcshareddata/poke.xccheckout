@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93E96BB1-0040-4123-842D-7A2E3AB9C5A3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>poke</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9084BEF2-0221-4053-A872-2C36B28D258D</key>
+		<string>https://github.com/csacsi/poke.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>poke.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9084BEF2-0221-4053-A872-2C36B28D258D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/csacsi/poke.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9084BEF2-0221-4053-A872-2C36B28D258D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9084BEF2-0221-4053-A872-2C36B28D258D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>poke</string>
+		</dict>
+	</array>
+</dict>
+</plist>
