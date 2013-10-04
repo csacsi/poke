@@ -41,6 +41,7 @@
 		F23AD9C517FF1DB900C181FF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C417FF1DB900C181FF /* MobileCoreServices.framework */; };
 		F23AD9C717FF1DC300C181FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C617FF1DC300C181FF /* QuartzCore.framework */; };
 		F23AD9C917FF1E7100C181FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */; };
+		F23AD9CE17FF2F1200C181FF /* MainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9CD17FF2F1200C181FF /* MainTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		F23AD9C417FF1DB900C181FF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F23AD9C617FF1DC300C181FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F23AD9CC17FF2F1200C181FF /* MainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableCell.h; path = Views/Cell/MainTableCell.h; sourceTree = "<group>"; };
+		F23AD9CD17FF2F1200C181FF /* MainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableCell.m; path = Views/Cell/MainTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,7 @@
 		F23AD95E17FF17DB00C181FF /* poke */ = {
 			isa = PBXGroup;
 			children = (
+				F23AD9CA17FF2EDF00C181FF /* Views */,
 				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
@@ -273,6 +277,23 @@
 				F23AD9A717FF1A4600C181FF /* RootViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F23AD9CA17FF2EDF00C181FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9CB17FF2EEF00C181FF /* Cell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F23AD9CB17FF2EEF00C181FF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9CC17FF2F1200C181FF /* MainTableCell.h */,
+				F23AD9CD17FF2F1200C181FF /* MainTableCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +399,7 @@
 				F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */,
 				F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */,
 				F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */,
+				F23AD9CE17FF2F1200C181FF /* MainTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
