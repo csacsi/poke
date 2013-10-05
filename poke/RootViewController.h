@@ -19,5 +19,5 @@
     MainView* mainView;
 }
 
-
+-(void)goBackToMainView;
 @end

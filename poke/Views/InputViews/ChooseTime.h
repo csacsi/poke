@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewWithJoypad.h"
+#import "LendInteraction.h"
+#import "ChooseNotification.h"
 
-@interface ChooseTime : UIView
+typedef enum {
+    lendTimeCategorieDay,
+    lendTimeCategorieWeek,
+    lendTimeCategorieMonth
+} lendTimeCategories;
+
+
+@interface ChooseTime : ViewWithJoypad<ViewWithJoypadDelegate>{
+    UIButton*backBtn;
+    int amount;
+    lendTimeCategories selectedTimeType;
+    BOOL isInteractionTypeSelected;
+    NSDate*selectedDate;
+    ChooseNotification*chooseNotif;
+}
+
 
 @end

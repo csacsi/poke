@@ -15,62 +15,69 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self setBackgroundColor:[UIColor yellowColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
         
-        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(40, 40, 40, 40)];
-        [backBtn setTitle:@"<" forState:UIControlStateNormal];
+        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 30, 35, 35)];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:backBtn];
 
-        amount = 1;
-        [joystick setTitle:[NSString stringWithFormat:@"%d",amount] forState:UIControlStateNormal];
+        amount = 0;
         isInteractionTypeSelected = NO;
+        
+        chooseTime = [[ChooseTime alloc]initWithFrame:CGRectZero];
+        [chooseTime setDelegate:self];
+        
+        [topButton setBackgroundImage:[UIImage imageNamed:@"money"] forState:UIControlStateNormal];
+        [leftButton setBackgroundImage:[UIImage imageNamed:@"book"]forState:UIControlStateNormal];
+        [rightButton setBackgroundImage:[UIImage imageNamed:@"clothes"]forState:UIControlStateNormal];
+        [bottomButton setBackgroundImage:[UIImage imageNamed:@"other"]forState:UIControlStateNormal];
     }
     return self;
 }
 
--(void)switchToView:(UIView *)view fromBtn:(UIImageView *)btn{
-    NSLog(@"vava");
+-(void)reArrange
+{
+    [super reArrange];
+    double scale = self.width/screenWidth;
+    
+    [backBtn setFrame:CGRectMake(10*scale, 30*scale, 35*scale, 35*scale)];
+}
 
-    [btn setBackgroundColor:[UIColor yellowColor]];
-    if (isInteractionTypeSelected)  {
-        [super switchToView:view fromBtn:btn];
+-(void)switchToView:(UIView *)view fromBtn:(UIButton *)btn{
+    NSLog(@"vava");
+    [self initBtnImages];
+//    [btn setImage:[UIImage imageNamed:@"check"] forState:UIControlStateNormal];
+    [UIView beginAnimations:@"" context:nil];
+        [btn setTransform:CGAffineTransformMakeScale(1.2, 1.2)];
+    [UIView commitAnimations];
+//    [btn setBackgroundColor:[UIColor greenColor]];
+    if (isInteractionTypeSelected && amount > 0)  {
+        [super initView:chooseTime forButton:btn];
+        [super switchToView:chooseTime fromBtn:btn];
     }else{
     
         if ([btn isEqual:topButton]) {
-            
             selectedInteractionType = lendCategoryCash;
+            [self showAlertWithMessage:@"Now you have to choose how many cash you want to lend for Csomak"];
             
         }else if([btn isEqual:leftButton]){
             selectedInteractionType = lendCategoryBook;
-            
+            [self showAlertWithMessage:@"Now you have to choose how many books you want to lend for Csomak"];
         }else if([btn isEqual:rightButton]){
             selectedInteractionType = lendCategoryClothes;
-            
+            [self showAlertWithMessage:@"Now you have to choose how many clothes you want to lend for Csomak"];
         }else if([btn isEqual:bottomButton]){
             //Other
+            [self initBtnImages];
+            return;
         }
-        [self showAlert];
+        isInteractionTypeSelected = YES;
+        
     }
     
 }
 
--(void)showAlert{
-
-    __block UITextField* tf = [[UITextField alloc]initWithFrame:CGRectMake(0, screenHeight, screenWidth, 100)];
-    
-    [tf setBackgroundColor:[UIColor clearColor]];
-    [tf setTextColor:[UIColor blackColor]];
-    [tf setText:@"Now you have to choose how many you lent to Csomak"];
-    [self addSubview:tf];
-    [UIView animateWithDuration:0.3 animations:^{
-        [tf setTransform:CGAffineTransformMakeTranslation(0, -150)];
-    }completion:^(BOOL finished) {
-        [NSTimer scheduledTimerWithTimeInterval:5 block:^{
-            [tf removeFromSuperview];
-        } repeats:NO];
-    }];
-}
 
 -(void)backBtn:(UIButton*)sender
 {
@@ -83,6 +90,30 @@
 -(void)joypadPressed{
     amount++;
     [joystick setTitle:[NSString stringWithFormat:@"%d",amount] forState:UIControlStateNormal];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    amount =  [alertView textFieldAtIndex:0].text.intValue;
+    UIButton * btn;
+    switch (selectedInteractionType) {
+        case lendCategoryCash:
+            btn = topButton;
+            break;
+        case lendCategoryClothes:
+            btn = rightButton;
+            break;
+        case lendCategoryBook:
+            btn = leftButton;
+            break;
+        case lendCategoryOther:
+            btn = bottomButton;
+            break;
+        default:
+            break;
+    }
+    [super initView:chooseTime forButton:btn];
+    [super switchToView:chooseTime fromBtn:btn];
 }
 
 /*

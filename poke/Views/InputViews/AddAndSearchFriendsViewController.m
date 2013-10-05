@@ -25,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self.view setBackgroundColor:[UIColor redColor]];
+        [self.view setBackgroundColor:[UIColor clearColor]];
         _allowDismiss = NO;
     }
     return self;

@@ -23,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        [self.view setBackgroundColor:colorAccent];
         // Custom initialization
 //        [self.view setBackgroundColor:[UIColor redColor]];
 //        tbl = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -43,6 +43,18 @@
     return self;
 }
 
+-(void)goBackToMainView
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        [mainView setTransform:CGAffineTransformMakeScale(4, 4)];
+        mainView.alpha = 0;
+    }completion:^(BOOL finished) {
+        [mainView removeFromSuperview];
+        mainView = [[MainView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        [self.view addSubview:mainView];
+    }];
+    
+}
 -(void)initParse
 {
     [Parse setApplicationId:@"es6gaHEsuLTK94BfIsTbsadbEnCeb065c32dwcMq" clientKey:@"WWbpWKeHZwK4JEgQXIVUDPOWGFxA63S0ZCxtruWG"];
@@ -175,6 +187,9 @@
 
 #pragma mark parsedataHandlerDelegate
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 
 @end

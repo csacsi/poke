@@ -19,15 +19,18 @@
         [itemsView setDelegate:self];
         [super initView:itemsView forButton:rightButton];
         rightView = itemsView;
+        [rightButton setImage:[UIImage imageNamed:@"view"] forState:UIControlStateNormal];
         
         lendView = [[NewLend alloc]initWithFrame:CGRectZero];
         [lendView setDelegate:self];
         [super initView:lendView forButton:topButton];
+        [topButton setImage:[UIImage imageNamed:@"lend"]forState:UIControlStateNormal];
         topView = lendView;
         
         addfriendsView = [[AddAndSearchFriendsViewController alloc]initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
         [addfriendsView setDelegate:self];
         [super initView:addfriendsView.view forButton:leftButton];
+        [leftButton setImage:[UIImage imageNamed:@"friends"]forState:UIControlStateNormal];
         leftView = addfriendsView.view;
         
         [bottomButton removeFromSuperview];

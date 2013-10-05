@@ -16,7 +16,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        [self setBackgroundColor:[UIColor greenColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

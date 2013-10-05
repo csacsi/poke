@@ -15,10 +15,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor purpleColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
         // Initialization code
-        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-        [backBtn setTitle:@"<" forState:UIControlStateNormal];
+        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 30, 35, 35)];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
         
         
@@ -45,7 +45,7 @@
 -(void)reArrange
 {
     double scale = self.width/screenWidth;
-    [backBtn setFrame:CGRectMake(0, 0, 50*scale, 50*scale)];
+    [backBtn setFrame:CGRectMake(10*scale, 30*scale, 35*scale, 35*scale)];
     [tbl setFrame:CGRectMake(0, 0, self.width*scale, self.height*scale)];
 }
 

@@ -15,12 +15,12 @@
 
 @end
 
-@interface ViewWithJoypad : UIView<UIGestureRecognizerDelegate, ViewWithJoypadDelegate>
+@interface ViewWithJoypad : UIView<UIGestureRecognizerDelegate, ViewWithJoypadDelegate,UIAlertViewDelegate>
 {
-    UIImageView*leftButton;
-    UIImageView*rightButton;
-    UIImageView*topButton;
-    UIImageView*bottomButton;
+    UIButton*leftButton;
+    UIButton*rightButton;
+    UIButton*topButton;
+    UIButton*bottomButton;
     
     UIButton* joystick;
     
@@ -38,13 +38,18 @@
     UIImageView * dummyView;
     UIImageView* viewDummy;
     CGRect originalRect;
+    
+    UILabel* tf;
+    NSTimer*alertTimer;
 
 }
 @property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 -(void)reArrange;
 -(void)switchBackToMainViewWithView:(UIView*)view;
--(void)switchToView:(UIView*)view fromBtn:(UIImageView*)btn;
--(void)initView:(UIView*)view forButton:(UIImageView*)button;
+-(void)switchToView:(UIView*)view fromBtn:(UIButton*)btn;
+-(void)initView:(UIView*)view forButton:(UIButton*)button;
 
 -(void)joypadPressed;
+-(void)showAlertWithMessage:(NSString*)msg;
+-(void)initBtnImages;
 @end

@@ -15,9 +15,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor greenColor]];
-        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(40, 40, 40, 40)];
-        [backBtn setTitle:@"<" forState:UIControlStateNormal];
+        [self setBackgroundColor:[UIColor clearColor]];
+        backBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 30, 35, 35)];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:backBtn];
         
@@ -40,7 +40,7 @@
     [super reArrange];
     double scale = self.width/screenWidth;
     
-    [backBtn setFrame:CGRectMake(40*scale, 40*scale, 40*scale, 40*scale)];
+    [backBtn setFrame:CGRectMake(10*scale, 30*scale, 35*scale, 35*scale)];
 }
 -(void)backBtn:(UIButton*)sender
 {
@@ -52,39 +52,38 @@
 -(void)switchToView:(UIView *)view fromBtn:(UIImageView *)btn{
     NSLog(@"vava");
     [self initBtnImages];
-    [btn setBackgroundColor:[UIColor yellowColor]];
+//    [btn setBackgroundColor:[UIColor yellowColor]];
     if ([btn isEqual:topButton]) {
-//        super switchToView:<#view#> fromBtn:<#btn#>
-//        selectedInteractionType = lendCategoryCash;
-        [joystick setImage:topButton.image forState:UIControlStateNormal];
+
+        [joystick setImage:topButton.imageView.image forState:UIControlStateNormal];
         [joystick setBackgroundColor:[UIColor clearColor]];
         [self personSelected:[DataManager getInstance].myFriends[0]];
         
     }else if([btn isEqual:leftButton]){
-//        selectedInteractionType = lendCategoryBook;
-        [joystick setImage:leftButton.image forState:UIControlStateNormal];
+
+        [joystick setImage:leftButton.imageView.image forState:UIControlStateNormal];
         [joystick setBackgroundColor:[UIColor clearColor]];
         [self personSelected:[DataManager getInstance].myFriends[1]];
     }else if([btn isEqual:rightButton]){
-//        selectedInteractionType = lendCategoryClothes;
-        [joystick setImage:rightButton.image forState:UIControlStateNormal];
+        [joystick setImage:rightButton.imageView.image forState:UIControlStateNormal];
         [joystick setBackgroundColor:[UIColor clearColor]];
-        [self personSelected:[DataManager getInstance].myFriends[3]];
+        [self personSelected:[DataManager getInstance].myFriends[2]];
     }else if([btn isEqual:bottomButton]){
         friendsController = [[AddAndSearchFriendsViewController alloc] initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
         [friendsController setPersonDelegate:self];
         [friendsController setAllowDismiss:YES];
         [ApplicationDelegate.rootViewController presentViewController:friendsController animated:YES completion:nil];
-//        selectedInteractionType = lendCategoryOther;
+
     }
 }
 
 -(void)initBtnImages
 {
-    [topButton setImage:[UIImage imageNamed:@"user01.png"]];
-    [leftButton setImage:[UIImage imageNamed:@"user02.png"]];
-    [rightButton setImage:[UIImage imageNamed:@"user03.png"]];
-    [bottomButton setImage:[UIImage imageNamed:@"user00.png"]];
+    
+    [topButton setImage:[UIImage imageNamed:@"user01.png"] forState:UIControlStateNormal];
+    [leftButton setImage:[UIImage imageNamed:@"user02.png"]forState:UIControlStateNormal];
+    [rightButton setImage:[UIImage imageNamed:@"user03.png"]forState:UIControlStateNormal];
+    [bottomButton setImage:[UIImage imageNamed:@"user00.png"]forState:UIControlStateNormal];
     [topButton setBackgroundColor:[UIColor clearColor]];
     [leftButton setBackgroundColor:[UIColor clearColor]];
     [rightButton setBackgroundColor:[UIColor clearColor]];
@@ -99,6 +98,12 @@
 {
     borrower = person;
     [joystick setImage:borrower.picture forState:UIControlStateNormal];
+//    joystick.layer.cornerRadius = joystick.imageView.image.size.height / 2-6;
+//    
+//    joystick.layer.masksToBounds = YES;
+//    
+//    joystick.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    joystick.layer.borderWidth = 3.0;
     [super initView:typeSelector forButton:joystick];
     [super switchToView:typeSelector fromBtn:joystick];
 }

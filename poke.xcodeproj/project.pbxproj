@@ -13,7 +13,9 @@
 		E89882C417FF391800180448 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89882C317FF391800180448 /* Parse.framework */; };
 		E89882C717FF8F5200180448 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E89882C617FF8F5200180448 /* Message.m */; };
 		E89882CA17FF9AB100180448 /* AddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89882C917FF9AB100180448 /* AddTableViewController.m */; };
-		F20D13ED18001A9C00A38817 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20D13EC18001A9C00A38817 /* Images.xcassets */; };
+		F20D13F21800385500A38817 /* ChooseNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F20D13F11800385500A38817 /* ChooseNotification.m */; };
+		F20D13F4180048B700A38817 /* P_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F20D13F3180048B700A38817 /* P_icon@2x.png */; };
+		F20D13F61800558E00A38817 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20D13F51800558E00A38817 /* Images.xcassets */; };
 		F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */; };
 		F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
@@ -87,7 +89,12 @@
 		E89882C617FF8F5200180448 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Model/Message.m; sourceTree = "<group>"; };
 		E89882C817FF9AB100180448 /* AddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableViewController.h; sourceTree = "<group>"; };
 		E89882C917FF9AB100180448 /* AddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableViewController.m; sourceTree = "<group>"; };
-		F20D13EC18001A9C00A38817 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F20D13EE1800327600A38817 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F20D13EF1800327600A38817 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F20D13F01800385500A38817 /* ChooseNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseNotification.h; path = Views/InputViews/ChooseNotification.h; sourceTree = "<group>"; };
+		F20D13F11800385500A38817 /* ChooseNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseNotification.m; path = Views/InputViews/ChooseNotification.m; sourceTree = "<group>"; };
+		F20D13F3180048B700A38817 /* P_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "P_icon@2x.png"; sourceTree = "<group>"; };
+		F20D13F51800558E00A38817 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F23AD95517FF17DB00C181FF /* poke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD95817FF17DB00C181FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -282,13 +289,16 @@
 		F23AD95E17FF17DB00C181FF /* poke */ = {
 			isa = PBXGroup;
 			children = (
+				F20D13EE1800327600A38817 /* Montserrat-Bold.ttf */,
+				F20D13EF1800327600A38817 /* Montserrat-Regular.ttf */,
 				E898828117FF2E4D00180448 /* Model */,
 				F23AD9CF17FF49FE00C181FF /* Utils */,
 				F23AD9CA17FF2EDF00C181FF /* Views */,
 				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
+				F20D13F3180048B700A38817 /* P_icon@2x.png */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
-				F20D13EC18001A9C00A38817 /* Images.xcassets */,
+				F20D13F51800558E00A38817 /* Images.xcassets */,
 				F23AD9F717FF523A00C181FF /* constants.h */,
 				F23AD9A917FF1A4B00C181FF /* ViewControllers */,
 				F23AD95F17FF17DB00C181FF /* Supporting Files */,
@@ -443,6 +453,8 @@
 		F2B5551017FF923F00411F7A /* InputViews */ = {
 			isa = PBXGroup;
 			children = (
+				F20D13F01800385500A38817 /* ChooseNotification.h */,
+				F20D13F11800385500A38817 /* ChooseNotification.m */,
 				F27959A1180013930006BEEC /* ChooseTime.h */,
 				F27959A2180013930006BEEC /* ChooseTime.m */,
 				F2B5551117FF925A00411F7A /* NewLend.h */,
@@ -550,8 +562,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20D13ED18001A9C00A38817 /* Images.xcassets in Resources */,
 				F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */,
+				F20D13F61800558E00A38817 /* Images.xcassets in Resources */,
+				F20D13F4180048B700A38817 /* P_icon@2x.png in Resources */,
 				F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +599,7 @@
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
 				F279599D180013530006BEEC /* ChooseType.m in Sources */,
 				F2B5552517FFB35F00411F7A /* DataManager.m in Sources */,
+				F20D13F21800385500A38817 /* ChooseNotification.m in Sources */,
 				F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */,
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
 				E89882CA17FF9AB100180448 /* AddTableViewController.m in Sources */,
@@ -716,7 +730,6 @@
 		F23AD98B17FF17DC00C181FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,7 +748,6 @@
 		F23AD98C17FF17DC00C181FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

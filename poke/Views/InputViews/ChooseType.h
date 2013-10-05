@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ViewWithJoypad.h"
 #import "LendInteraction.h"
-
+#import "ChooseTime.h"
 @interface ChooseType : ViewWithJoypad{
     UIButton*backBtn;
     int amount;
     lendInteractionCateoryType selectedInteractionType;
     BOOL isInteractionTypeSelected;
+    ChooseTime * chooseTime;
 }
 
 @end
