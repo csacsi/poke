@@ -42,7 +42,7 @@
 
 -(void)initParse
 {
-    [Parse setApplicationId:@"7rie26iRzAwT5W1AlPweu6hFcIbqRT5DT9cmWJQb" clientKey:@"sk4dkLvdjQALhli0O1cPjU2Wpqng28e0Fnc1Q3wr"];
+    [Parse setApplicationId:@"es6gaHEsuLTK94BfIsTbsadbEnCeb065c32dwcMq" clientKey:@"WWbpWKeHZwK4JEgQXIVUDPOWGFxA63S0ZCxtruWG"];
     
     if (![PFUser currentUser])
     {
