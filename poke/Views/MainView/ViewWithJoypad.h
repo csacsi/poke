@@ -39,6 +39,7 @@
     CGRect originalRect;
 
 }
+-(void)reArrange;
 -(void)switchBackToMainViewWithView:(UIView*)view;
 -(void)initView:(UIView*)view forButton:(UIImageView*)button;
 @end

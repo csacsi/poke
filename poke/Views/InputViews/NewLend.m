@@ -26,6 +26,14 @@
 
 -(void)setFrame:(CGRect)frame{
     [super setFrame:frame];
+    [self reArrange];
+}
+-(void)reArrange
+{
+    [super reArrange];
+    double scale = self.width/screenWidth;
+    
+    [backBtn setFrame:CGRectMake(40*scale, 40*scale, 40*scale, 40*scale)];
 }
 -(void)backBtn:(UIButton*)sender
 {

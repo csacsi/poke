@@ -25,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self.view setBackgroundColor:[UIColor redColor]];
     }
     return self;
 }
@@ -78,7 +79,7 @@
 }
 
 - (IBAction)backPressed:(id)sender {
-    [[NSNotificationCenter defaultCenter]postNotificationName:eventMainViewBackToNormal object:self.view];
+    [self.delegate viewWithJoypadBackPressed:self.view];
 }
 
 #pragma mark Content Filtering

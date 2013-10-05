@@ -16,6 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         itemsView = [[ItemsView alloc]initWithFrame:CGRectZero];
+        [itemsView setDelegate:self];
         [super initView:itemsView forButton:rightButton];
         rightView = itemsView;
         
@@ -23,6 +24,11 @@
         [lendView setDelegate:self];
         [super initView:lendView forButton:topButton];
         topView = lendView;
+        
+        addfriendsView = [[AddAndSearchFriendsViewController alloc]initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
+        [addfriendsView setDelegate:self];
+        [super initView:addfriendsView.view forButton:leftButton];
+        leftView = addfriendsView.view;
     }
     return self;
 }

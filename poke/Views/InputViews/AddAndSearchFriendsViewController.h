@@ -8,6 +8,7 @@
 
 #import <AddressBookUI/AddressBookUI.h>
 #import <UIKit/UIKit.h>
+#import "ViewWithJoypad.h"
 
 @interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate, ABPeoplePickerNavigationControllerDelegate>
 
@@ -24,5 +25,7 @@
 @property NSString *lastSearchText;
 
 @property (strong, nonatomic) NSMutableArray *friendsArray;
+
+@property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 
 @end

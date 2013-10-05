@@ -15,6 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setBackgroundColor:[UIColor purpleColor]];
         // Initialization code
         backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
         [backBtn setTitle:@"<" forState:UIControlStateNormal];
@@ -41,12 +42,16 @@
     [super setFrame:frame];
     [self reArrange];
 }
--(void)reArrange{
-    [backBtn setFrame:CGRectMake(0, 0, 50, 50)];
-    [tbl setFrame:CGRectMake(0, 0, self.width, self.height)];
+-(void)reArrange
+{
+    double scale = self.width/screenWidth;
+    [backBtn setFrame:CGRectMake(0, 0, 50*scale, 50*scale)];
+    [tbl setFrame:CGRectMake(0, 0, self.width*scale, self.height*scale)];
 }
--(void)goBack{
-    [[NSNotificationCenter defaultCenter]postNotificationName:eventMainViewBackToNormal object:self];
+
+-(void)goBack
+{
+    [self.delegate viewWithJoypadBackPressed:self];
 }
 
 #pragma mark tableViewdelegates
