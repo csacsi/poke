@@ -69,6 +69,11 @@
 {
     borrower = person;
     [joystick setImage:borrower.picture];
+    joystick.layer.cornerRadius = joystick.image.size.height / 2-6;
+    joystick.layer.masksToBounds = YES;
+    
+    joystick.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    joystick.layer.borderWidth = 3.0;
 }
 /*
  
