@@ -9,32 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "AddAndSearchFriendsViewController.h"
 #import "ItemsView.h"
+#import "ViewWithJoypad.h"
 
 
-@interface NewLend :UIView
+@interface NewLend :ViewWithJoypad
 {
     UIButton*backBtn;
-    
-    UIView*leftButton;
-    UIView*rightButton;
-    UIView*topButton;
-    UIView*bottomButton;
-    
-    UIView* joystick;
-    
-    UIPanGestureRecognizer*pan;
-    
-    UIView*grabbedBtn;
-    CGPoint startPoint;
-    
-    AddAndSearchFriendsViewController *bottomViewController;
-    UIView*leftView;
-    ItemsView*rightView;
-    
-    UIImageView * dummyView;
-    CGRect originalRect;
-
-    
 }
+@property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 
 @end

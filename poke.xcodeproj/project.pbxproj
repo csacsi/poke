@@ -54,6 +54,7 @@
 		F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9F217FF519000C181FF /* SQLiteDataHandler.m */; };
 		F24E612B17FF64840048254B /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612A17FF64840048254B /* MainView.m */; };
 		F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */; };
+		F279599217FFDBB20006BEEC /* ViewWithJoypad.m in Sources */ = {isa = PBXBuildFile; fileRef = F279599117FFDBB20006BEEC /* ViewWithJoypad.m */; };
 		F2B5551317FF925A00411F7A /* NewLend.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551217FF925A00411F7A /* NewLend.m */; };
 		F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551717FF982600411F7A /* AddAndSearchFriendsViewController.m */; };
 		F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */; };
@@ -149,6 +150,8 @@
 		F24E612A17FF64840048254B /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Views/MainView/MainView.m; sourceTree = "<group>"; };
 		F24E612E17FF88AD0048254B /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		F279599017FFDBB20006BEEC /* ViewWithJoypad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWithJoypad.h; path = Views/MainView/ViewWithJoypad.h; sourceTree = "<group>"; };
+		F279599117FFDBB20006BEEC /* ViewWithJoypad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWithJoypad.m; path = Views/MainView/ViewWithJoypad.m; sourceTree = "<group>"; };
 		F2B5551117FF925A00411F7A /* NewLend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewLend.h; path = Views/InputViews/NewLend.h; sourceTree = "<group>"; };
 		F2B5551217FF925A00411F7A /* NewLend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewLend.m; path = Views/InputViews/NewLend.m; sourceTree = "<group>"; };
 		F2B5551617FF982600411F7A /* AddAndSearchFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAndSearchFriendsViewController.h; path = Views/InputViews/AddAndSearchFriendsViewController.h; sourceTree = "<group>"; };
@@ -416,6 +419,8 @@
 			children = (
 				F24E612917FF64840048254B /* MainView.h */,
 				F24E612A17FF64840048254B /* MainView.m */,
+				F279599017FFDBB20006BEEC /* ViewWithJoypad.h */,
+				F279599117FFDBB20006BEEC /* ViewWithJoypad.m */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */,
+				F279599217FFDBB20006BEEC /* ViewWithJoypad.m in Sources */,
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
 				E898828417FF2EC800180448 /* Profile.m in Sources */,
 				E898828017FF2E4500180448 /* Friend.m in Sources */,
