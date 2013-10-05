@@ -74,15 +74,15 @@
         
         
     } else {
-        
-        PFObject *msgObject = [PFObject objectWithClassName:@"Message"];
-        [msgObject setObject: @"derjugoBaszod" forKey:@"text"];
-        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"cancelled"];
-        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"sent"];
-        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"isSMS"];
-        [msgObject setObject: @"csomakk@gmail.com" forKey:@"to"];
-        [msgObject setObject: [NSDate date] forKey:@"date"];
-        [msgObject saveInBackground];
+//        
+//        PFObject *msgObject = [PFObject objectWithClassName:@"Message"];
+//        [msgObject setObject: @"derjugoBaszod" forKey:@"text"];
+//        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"cancelled"];
+//        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"sent"];
+//        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"isSMS"];
+//        [msgObject setObject: @"csomakk@gmail.com" forKey:@"to"];
+//        [msgObject setObject: [NSDate date] forKey:@"date"];
+//        [msgObject saveInBackground];
  
     }
 }

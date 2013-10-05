@@ -39,14 +39,19 @@
         [btn setTransform:CGAffineTransformMakeScale(1.2, 1.2)];
     [UIView commitAnimations];
     
-        if ([btn isEqual:topButton]) {
+        if ([btn isEqual:topButton])
+        {
             isEmail = !isEmail;
-        }else if([btn isEqual:leftButton]){
+        }
+        else if([btn isEqual:leftButton])
+        {
             isSMS = !isSMS;
-            
-        }else if([btn isEqual:rightButton]){
+        }
+        else if([btn isEqual:rightButton])
+        {
             isNotification = !isNotification;
-        }else if([btn isEqual:bottomButton]){
+        }else if([btn isEqual:bottomButton])
+        {
             isReminder = !isReminder;
         }
     [self initBtnImages];
@@ -62,9 +67,9 @@
     }else{
         [topButton setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
     }
-    
+
     if (isSMS) {
-        [topButton setTransform:CGAffineTransformMakeScale(1.2, 1.2)];
+        [leftButton setTransform:CGAffineTransformMakeScale(1.2, 1.2)];
     }else{
         [leftButton setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
     }

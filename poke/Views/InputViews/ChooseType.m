@@ -63,10 +63,14 @@
             
         }else if([btn isEqual:leftButton]){
             selectedInteractionType = lendCategoryBook;
-            [self showAlertWithMessage:@"Now you have to choose how many books you want to lend for Csomak"];
+            [super initView:chooseTime forButton:btn];
+            [super switchToView:chooseTime fromBtn:btn];
+//            [self showAlertWithMessage:@"Now you have to choose how many books you want to lend for Csomak"];
         }else if([btn isEqual:rightButton]){
             selectedInteractionType = lendCategoryClothes;
-            [self showAlertWithMessage:@"Now you have to choose how many clothes you want to lend for Csomak"];
+            [super initView:chooseTime forButton:btn];
+            [super switchToView:chooseTime fromBtn:btn];
+//            [self showAlertWithMessage:@"Now you have to choose how many clothes you want to lend for Csomak"];
         }else if([btn isEqual:bottomButton]){
             //Other
             [self initBtnImages];

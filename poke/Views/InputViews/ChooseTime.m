@@ -57,16 +57,17 @@
         
         if ([btn isEqual:topButton]) {
             selectedTimeType = lendTimeCategorieDay;
-            [self showAlertWithMessage:@"How many days you want to lend your money?"];
+            [self showAlertWithMessage:@"How many days you want to lend it?"];
             
         }else if([btn isEqual:leftButton]){
             selectedTimeType = lendTimeCategorieMonth;
-            [self showAlertWithMessage:@"How many months you want to lend your money?"];
+            [self showAlertWithMessage:@"How many months you want to lend it?"];
         }else if([btn isEqual:rightButton]){
             selectedTimeType = lendTimeCategorieWeek;
-            [self showAlertWithMessage:@"How many weeks you want to lend your money?"];
+            [self showAlertWithMessage:@"How many weeks you want to lend it?"];
         }else if([btn isEqual:bottomButton]){
             //Other
+            return;
         }
         isInteractionTypeSelected = YES;
         
