@@ -10,6 +10,8 @@
 #import "MainTableCell.h"
 
 #import "LendInteraction.h"
+#import "Message.h"
+#import "ParseDataHandler.h"
 
 @interface RootViewController ()
 
@@ -35,6 +37,7 @@
         mainView = [[MainView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         [self.view addSubview:mainView];
         
+       
         
     }
     return self;
@@ -56,6 +59,19 @@
         
         [self presentViewController:loginVC animated:YES completion:nil];
         
+        
+        
+    } else {
+        
+        PFObject *msgObject = [PFObject objectWithClassName:@"Message"];
+        [msgObject setObject: @"derjugoBaszod" forKey:@"text"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"cancelled"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"sent"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"isSMS"];
+        [msgObject setObject: @"csomakk@gmail.com" forKey:@"to"];
+        [msgObject setObject: [NSDate date] forKey:@"date"];
+        [msgObject saveInBackground];
+ 
     }
 }
 
