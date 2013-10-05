@@ -25,6 +25,7 @@
     UIImageView* joystick;
     
     UIPanGestureRecognizer*pan;
+    UITapGestureRecognizer*tap;
     
     UIView*grabbedBtn;
     CGPoint startPoint;
@@ -41,5 +42,8 @@
 }
 -(void)reArrange;
 -(void)switchBackToMainViewWithView:(UIView*)view;
+-(void)switchToView:(UIView*)view fromBtn:(UIImageView*)btn;
 -(void)initView:(UIView*)view forButton:(UIImageView*)button;
+
+-(void)joypadPressed;
 @end

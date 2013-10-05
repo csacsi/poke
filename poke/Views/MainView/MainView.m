@@ -29,7 +29,11 @@
         [addfriendsView setDelegate:self];
         [super initView:addfriendsView.view forButton:leftButton];
         leftView = addfriendsView.view;
+        
+        [bottomButton removeFromSuperview];
+        bottomButton = nil;
     }
+    
     return self;
 }
 

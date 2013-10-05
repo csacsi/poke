@@ -9,8 +9,15 @@
 #import <AddressBookUI/AddressBookUI.h>
 #import <UIKit/UIKit.h>
 #import "ViewWithJoypad.h"
+#import "Friend.h"
+@class AddAndSearchFriendsViewController;
+@protocol AddAndSearchFriendsViewControllerDelegate <NSObject>
 
-@interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate, ABPeoplePickerNavigationControllerDelegate>
+-(void)personSelected:(Friend*)person;
+
+@end
+
+@interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate, ABPeoplePickerNavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) NSMutableArray *filteredFriendsArray;
 @property IBOutlet UISearchBar *friendsSearchBar;
@@ -27,5 +34,9 @@
 @property (strong, nonatomic) NSMutableArray *friendsArray;
 
 @property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
+
+@property BOOL allowDismiss;
+
+@property (nonatomic,strong) id<AddAndSearchFriendsViewControllerDelegate>personDelegate;
 
 @end

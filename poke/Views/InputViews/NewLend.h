@@ -10,11 +10,15 @@
 #import "AddAndSearchFriendsViewController.h"
 #import "ItemsView.h"
 #import "ViewWithJoypad.h"
+#import "Friend.h"
 
-
-@interface NewLend :ViewWithJoypad
+@interface NewLend :ViewWithJoypad<AddAndSearchFriendsViewControllerDelegate>
 {
     UIButton*backBtn;
+    
+    AddAndSearchFriendsViewController* friendsController;
+    
+    Friend* borrower;
 }
 @property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 
