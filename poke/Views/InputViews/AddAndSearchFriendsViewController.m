@@ -18,6 +18,7 @@
 @synthesize friendsArray;
 @synthesize friendsSearchBar;
 @synthesize filteredFriendsArray;
+@synthesize lastSearchText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +36,7 @@
         return [friendsArray count];
     }
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
@@ -63,7 +65,7 @@
 {
     [super viewDidLoad];
     
-    friendsArray = [ NSArray arrayWithObjects:
+    friendsArray = [ NSMutableArray arrayWithObjects:
                     [ Friend name:@"Csomak" email:@"csomakk@gmail.com" ]
                     ,[ Friend name:@"Csacsi" email:@"huncsacsika@gmail.com" ]
                     ,[ Friend name:@"Jezus" email:@"csomakk@gmail.com" ]
@@ -90,6 +92,7 @@
     [self.filteredFriendsArray removeAllObjects];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
     filteredFriendsArray = [NSMutableArray arrayWithArray:[friendsArray filteredArrayUsingPredicate:predicate]];
+    lastSearchText = searchText;
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods
@@ -107,6 +110,13 @@
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
     // Return YES to cause the search result table view to be reloaded.
     return YES;
+}
+
+- (IBAction)createAction:(id)sender {
+    Friend *friend = [ Friend name: lastSearchText email:@"csomakk@gmail.com" ];
+    [friendsArray addObject:friend];
+    [self.table reloadData];
+    
 }
 
 @end

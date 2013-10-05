@@ -13,9 +13,15 @@
 @property (strong,nonatomic) NSMutableArray *filteredFriendsArray;
 @property IBOutlet UISearchBar *friendsSearchBar;
 
+@property (weak, nonatomic) IBOutlet UIButton *create;
+
+- (IBAction)createAction:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UITableView *table;
 - (IBAction)backPressed:(id)sender;
 
-@property (strong, nonatomic) NSArray *friendsArray;
+@property NSString *lastSearchText;
+
+@property (strong, nonatomic) NSMutableArray *friendsArray;
 
 @end

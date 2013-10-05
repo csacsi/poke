@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAndSearchFriendsViewController">
             <connections>
+                <outlet property="create" destination="I64-0C-WT2" id="FMf-aE-BUU"/>
                 <outlet property="searchDisplayController" destination="vNn-Cq-rhy" id="46Q-Ty-DnZ"/>
                 <outlet property="table" destination="EBt-gT-oIg" id="fCJ-Yc-xO5"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -44,6 +45,16 @@
                         <outlet property="delegate" destination="-1" id="qNQ-ss-TYR"/>
                     </connections>
                 </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I64-0C-WT2">
+                    <rect key="frame" x="239" y="9" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Create">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createAction:" destination="-1" eventType="touchUpInside" id="eYx-O9-eNn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
