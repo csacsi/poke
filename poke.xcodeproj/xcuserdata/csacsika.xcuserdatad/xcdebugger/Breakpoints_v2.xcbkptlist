@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "poke/Views/MainView/ViewWithJoypad.m"
-            timestampString = "402646319.349294"
+            timestampString = "402660299.221568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "-initWithFrame:"
             landmarkType = "5">
          </BreakpointContent>

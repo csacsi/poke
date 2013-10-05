@@ -6,9 +6,9 @@
 //  Created by Toth Csaba on 10/5/13.
 //  Copyright (c) 2013 Distinction. All rights reserved.
 //
-
 #import "NewLend.h"
 #import "AppDelegate.h"
+
 @implementation NewLend
 
 - (id)initWithFrame:(CGRect)frame
@@ -22,6 +22,11 @@
         [self addSubview:backBtn];
         
         [self initBtnImages];
+        
+        typeSelector = [[ChooseType alloc]initWithFrame:CGRectZero];
+        [typeSelector setDelegate:self];
+        [super initView:typeSelector forButton:joystick];
+        [self addSubview:typeSelector];
     }
     return self;
 }
@@ -48,27 +53,59 @@
     NSLog(@"vava");
     [self initBtnImages];
     [btn setBackgroundColor:[UIColor yellowColor]];
+    if ([btn isEqual:topButton]) {
+//        super switchToView:<#view#> fromBtn:<#btn#>
+//        selectedInteractionType = lendCategoryCash;
+        [joystick setImage:topButton.image forState:UIControlStateNormal];
+        [joystick setBackgroundColor:[UIColor clearColor]];
+        [self personSelected:[DataManager getInstance].myFriends[0]];
+        
+    }else if([btn isEqual:leftButton]){
+//        selectedInteractionType = lendCategoryBook;
+        [joystick setImage:leftButton.image forState:UIControlStateNormal];
+        [joystick setBackgroundColor:[UIColor clearColor]];
+        [self personSelected:[DataManager getInstance].myFriends[1]];
+    }else if([btn isEqual:rightButton]){
+//        selectedInteractionType = lendCategoryClothes;
+        [joystick setImage:rightButton.image forState:UIControlStateNormal];
+        [joystick setBackgroundColor:[UIColor clearColor]];
+        [self personSelected:[DataManager getInstance].myFriends[3]];
+    }else if([btn isEqual:bottomButton]){
+        friendsController = [[AddAndSearchFriendsViewController alloc] initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
+        [friendsController setPersonDelegate:self];
+        [friendsController setAllowDismiss:YES];
+        [ApplicationDelegate.rootViewController presentViewController:friendsController animated:YES completion:nil];
+//        selectedInteractionType = lendCategoryOther;
+    }
 }
 
 -(void)initBtnImages
 {
-    [topButton setBackgroundColor:[UIColor colorWithRed:255 green:100 blue:100 alpha:1]];
-    [leftButton setBackgroundColor:[UIColor colorWithRed:100 green:255 blue:100 alpha:1]];
-    [rightButton setBackgroundColor:[UIColor colorWithRed:100 green:100 blue:255 alpha:1]];
-    [bottomButton setBackgroundColor:[UIColor colorWithRed:150 green:110 blue:29 alpha:1]];
+    [topButton setImage:[UIImage imageNamed:@"user01.png"]];
+    [leftButton setImage:[UIImage imageNamed:@"user02.png"]];
+    [rightButton setImage:[UIImage imageNamed:@"user03.png"]];
+    [bottomButton setImage:[UIImage imageNamed:@"user00.png"]];
+    [topButton setBackgroundColor:[UIColor clearColor]];
+    [leftButton setBackgroundColor:[UIColor clearColor]];
+    [rightButton setBackgroundColor:[UIColor clearColor]];
+    [bottomButton setBackgroundColor:[UIColor clearColor]];
 }
 
 -(void)joypadPressed{
-    friendsController = [[AddAndSearchFriendsViewController alloc] initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
-    [friendsController setPersonDelegate:self];
-    [friendsController setAllowDismiss:YES];
-    [ApplicationDelegate.rootViewController presentViewController:friendsController animated:YES completion:nil];
+    
 }
 
 -(void)personSelected:(Friend *)person
 {
     borrower = person;
-    [joystick setImage:borrower.picture];
+    [joystick setImage:borrower.picture forState:UIControlStateNormal];
+    [super initView:typeSelector forButton:joystick];
+    [super switchToView:typeSelector fromBtn:joystick];
+}
+
+-(void)viewWithJoypadBackPressed:(UIView *)childView
+{
+    [super switchBackToMainViewWithView:childView];
 }
 /*
  

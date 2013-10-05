@@ -20,11 +20,20 @@
         [csacsi setName:@"Toth Csaba"];
         [csacsi setEmail:@"huncsacsika@gmail.com"];
         [csacsi setPhoneNumber:@"+36304724243"];
+        [csacsi setPicture:[UIImage imageNamed:@"user01"]];
         
         Friend * csomak = [[Friend alloc]init];
         [csomak setName:@"Csomak Gabor"];
         [csomak setEmail:@"csomakk@gmail.com"];
         [csomak setPhoneNumber:@"+36303211232"];
+        [csomak setPicture:[UIImage imageNamed:@"user02"]];
+        
+        Friend * foxy = [[Friend alloc]init];
+        [foxy setName:@"Zsofi Terjek"];
+        [foxy setEmail:@"zsofi@gmail.com"];
+        [foxy setPhoneNumber:@"+36303211232"];
+        [foxy setPicture:[UIImage imageNamed:@"user03"]];
+        
         
         LendInteraction * lendone = [[LendInteraction alloc]init];
         [lendone setName:@"Lord of the rings"];
@@ -43,7 +52,7 @@
         //        [lendTwo setUser:[PFUser currentUser]];
         
         
-        _myFriends = @[csacsi,csomak].mutableCopy;
+        _myFriends = @[csacsi,csomak,foxy].mutableCopy;
         _myLends = @[lendTwo, lendone].mutableCopy;
         [_myLends sortUsingComparator:^NSComparisonResult(LendInteraction* obj1, LendInteraction* obj2) {
             return obj1 .status<obj2.status;

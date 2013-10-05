@@ -11,6 +11,8 @@
 #import "ItemsView.h"
 #import "ViewWithJoypad.h"
 #import "Friend.h"
+#import "LendInteraction.h"
+#import "ChooseType.h"
 
 @interface NewLend :ViewWithJoypad<AddAndSearchFriendsViewControllerDelegate>
 {
@@ -19,6 +21,10 @@
     AddAndSearchFriendsViewController* friendsController;
     
     Friend* borrower;
+    lendInteractionCateoryType selectedInteractionType;
+    LendInteraction* lendObject;
+    
+    ChooseType* typeSelector;
 }
 @property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 

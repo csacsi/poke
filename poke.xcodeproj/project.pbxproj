@@ -13,13 +13,13 @@
 		E89882C417FF391800180448 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89882C317FF391800180448 /* Parse.framework */; };
 		E89882C717FF8F5200180448 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E89882C617FF8F5200180448 /* Message.m */; };
 		E89882CA17FF9AB100180448 /* AddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89882C917FF9AB100180448 /* AddTableViewController.m */; };
+		F20D13ED18001A9C00A38817 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20D13EC18001A9C00A38817 /* Images.xcassets */; };
 		F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */; };
 		F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
 		F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F23AD96117FF17DB00C181FF /* InfoPlist.strings */; };
 		F23AD96517FF17DB00C181FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD96417FF17DB00C181FF /* main.m */; };
 		F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD96817FF17DB00C181FF /* AppDelegate.m */; };
-		F23AD97417FF17DB00C181FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23AD97317FF17DB00C181FF /* Images.xcassets */; };
 		F23AD97B17FF17DC00C181FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD97A17FF17DC00C181FF /* XCTest.framework */; };
 		F23AD97C17FF17DC00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD97D17FF17DC00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
@@ -55,6 +55,8 @@
 		F24E612B17FF64840048254B /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612A17FF64840048254B /* MainView.m */; };
 		F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */; };
 		F279599217FFDBB20006BEEC /* ViewWithJoypad.m in Sources */ = {isa = PBXBuildFile; fileRef = F279599117FFDBB20006BEEC /* ViewWithJoypad.m */; };
+		F279599D180013530006BEEC /* ChooseType.m in Sources */ = {isa = PBXBuildFile; fileRef = F279599C180013530006BEEC /* ChooseType.m */; };
+		F27959A3180013930006BEEC /* ChooseTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F27959A2180013930006BEEC /* ChooseTime.m */; };
 		F2B5551317FF925A00411F7A /* NewLend.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551217FF925A00411F7A /* NewLend.m */; };
 		F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551717FF982600411F7A /* AddAndSearchFriendsViewController.m */; };
 		F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */; };
@@ -85,6 +87,7 @@
 		E89882C617FF8F5200180448 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Model/Message.m; sourceTree = "<group>"; };
 		E89882C817FF9AB100180448 /* AddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableViewController.h; sourceTree = "<group>"; };
 		E89882C917FF9AB100180448 /* AddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableViewController.m; sourceTree = "<group>"; };
+		F20D13EC18001A9C00A38817 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F23AD95517FF17DB00C181FF /* poke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD95817FF17DB00C181FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,7 +98,6 @@
 		F23AD96617FF17DB00C181FF /* poke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poke-Prefix.pch"; sourceTree = "<group>"; };
 		F23AD96717FF17DB00C181FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F23AD96817FF17DB00C181FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F23AD97317FF17DB00C181FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F23AD97917FF17DC00C181FF /* pokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD97A17FF17DC00C181FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F23AD98217FF17DC00C181FF /* pokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pokeTests-Info.plist"; sourceTree = "<group>"; };
@@ -152,6 +154,10 @@
 		F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		F279599017FFDBB20006BEEC /* ViewWithJoypad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWithJoypad.h; path = Views/MainView/ViewWithJoypad.h; sourceTree = "<group>"; };
 		F279599117FFDBB20006BEEC /* ViewWithJoypad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWithJoypad.m; path = Views/MainView/ViewWithJoypad.m; sourceTree = "<group>"; };
+		F279599B180013530006BEEC /* ChooseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseType.h; path = Views/InputViews/ChooseType.h; sourceTree = "<group>"; };
+		F279599C180013530006BEEC /* ChooseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseType.m; path = Views/InputViews/ChooseType.m; sourceTree = "<group>"; };
+		F27959A1180013930006BEEC /* ChooseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseTime.h; path = Views/InputViews/ChooseTime.h; sourceTree = "<group>"; };
+		F27959A2180013930006BEEC /* ChooseTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseTime.m; path = Views/InputViews/ChooseTime.m; sourceTree = "<group>"; };
 		F2B5551117FF925A00411F7A /* NewLend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewLend.h; path = Views/InputViews/NewLend.h; sourceTree = "<group>"; };
 		F2B5551217FF925A00411F7A /* NewLend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewLend.m; path = Views/InputViews/NewLend.m; sourceTree = "<group>"; };
 		F2B5551617FF982600411F7A /* AddAndSearchFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAndSearchFriendsViewController.h; path = Views/InputViews/AddAndSearchFriendsViewController.h; sourceTree = "<group>"; };
@@ -282,9 +288,9 @@
 				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
+				F20D13EC18001A9C00A38817 /* Images.xcassets */,
 				F23AD9F717FF523A00C181FF /* constants.h */,
 				F23AD9A917FF1A4B00C181FF /* ViewControllers */,
-				F23AD97317FF17DB00C181FF /* Images.xcassets */,
 				F23AD95F17FF17DB00C181FF /* Supporting Files */,
 			);
 			path = poke;
@@ -437,8 +443,12 @@
 		F2B5551017FF923F00411F7A /* InputViews */ = {
 			isa = PBXGroup;
 			children = (
+				F27959A1180013930006BEEC /* ChooseTime.h */,
+				F27959A2180013930006BEEC /* ChooseTime.m */,
 				F2B5551117FF925A00411F7A /* NewLend.h */,
 				F2B5551217FF925A00411F7A /* NewLend.m */,
+				F279599B180013530006BEEC /* ChooseType.h */,
+				F279599C180013530006BEEC /* ChooseType.m */,
 				F2B5551617FF982600411F7A /* AddAndSearchFriendsViewController.h */,
 				F2B5551717FF982600411F7A /* AddAndSearchFriendsViewController.m */,
 				F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */,
@@ -540,8 +550,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20D13ED18001A9C00A38817 /* Images.xcassets in Resources */,
 				F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */,
-				F23AD97417FF17DB00C181FF /* Images.xcassets in Resources */,
 				F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27959A3180013930006BEEC /* ChooseTime.m in Sources */,
 				F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */,
 				F279599217FFDBB20006BEEC /* ViewWithJoypad.m in Sources */,
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
@@ -573,6 +584,7 @@
 				F2B5551317FF925A00411F7A /* NewLend.m in Sources */,
 				E89882C717FF8F5200180448 /* Message.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
+				F279599D180013530006BEEC /* ChooseType.m in Sources */,
 				F2B5552517FFB35F00411F7A /* DataManager.m in Sources */,
 				F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */,
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,

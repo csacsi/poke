@@ -15,14 +15,14 @@
 
 @end
 
-@interface ViewWithJoypad : UIView<UIGestureRecognizerDelegate>
+@interface ViewWithJoypad : UIView<UIGestureRecognizerDelegate, ViewWithJoypadDelegate>
 {
     UIImageView*leftButton;
     UIImageView*rightButton;
     UIImageView*topButton;
     UIImageView*bottomButton;
     
-    UIImageView* joystick;
+    UIButton* joystick;
     
     UIPanGestureRecognizer*pan;
     UITapGestureRecognizer*tap;
@@ -40,6 +40,7 @@
     CGRect originalRect;
 
 }
+@property (nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 -(void)reArrange;
 -(void)switchBackToMainViewWithView:(UIView*)view;
 -(void)switchToView:(UIView*)view fromBtn:(UIImageView*)btn;

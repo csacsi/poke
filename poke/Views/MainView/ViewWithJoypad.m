@@ -9,6 +9,7 @@
 #import "ViewWithJoypad.h"
 
 #define defaultBtnSize 80
+#define defaultJoySize 100
 @implementation ViewWithJoypad
 
 - (id)initWithFrame:(CGRect)frame
@@ -16,20 +17,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        topButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2, self.height/2-defaultBtnSize/2-80, defaultBtnSize,defaultBtnSize)];
+        topButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2, self.height/2-defaultBtnSize/2-120, defaultBtnSize,defaultBtnSize)];
         [topButton setBackgroundColor:[UIColor blueColor]];
         
-        bottomButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2, self.height/2-defaultBtnSize/2+80, defaultBtnSize,defaultBtnSize)];
+        bottomButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2, self.height/2-defaultBtnSize/2+120, defaultBtnSize,defaultBtnSize)];
         [bottomButton setBackgroundColor:[UIColor blueColor]];
         
-        leftButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2-80, self.height/2-defaultBtnSize/2, defaultBtnSize,defaultBtnSize)];
+        leftButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2-120, self.height/2-defaultBtnSize/2, defaultBtnSize,defaultBtnSize)];
         [leftButton setBackgroundColor:[UIColor blueColor]];
         
-        rightButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2+80, self.height/2-defaultBtnSize/2, defaultBtnSize,defaultBtnSize)];
+        rightButton = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2+120, self.height/2-defaultBtnSize/2, defaultBtnSize,defaultBtnSize)];
         [rightButton setBackgroundColor:[UIColor blueColor]];
         
-        joystick = [[UIImageView alloc] initWithFrame:CGRectMake(self.width/2-defaultBtnSize/2, self.height/2-defaultBtnSize/2, defaultBtnSize, defaultBtnSize)];
+        joystick = [[UIButton alloc] initWithFrame:CGRectMake(self.width/2-defaultJoySize/2, self.height/2-defaultJoySize/2, defaultJoySize, defaultJoySize)];
         [joystick setBackgroundColor:[UIColor redColor]];
+        [joystick setUserInteractionEnabled:NO];
         
         [self addSubview:topButton];
         [self addSubview:bottomButton];
@@ -83,11 +85,13 @@
 -(void)reArrange
 {
     double btnSize = defaultBtnSize* (self.width/screenWidth);
-    [topButton setFrame:CGRectMake(self.width/2-btnSize/2, self.height/2-btnSize/2-80* (self.width/screenWidth), btnSize,btnSize)];
-    [bottomButton setFrame:CGRectMake(self.width/2-btnSize/2, self.height/2-btnSize/2+80* (self.width/screenWidth), btnSize,btnSize)];
-    [leftButton setFrame:CGRectMake(self.width/2-btnSize/2-80* (self.width/screenWidth), self.height/2-btnSize/2, btnSize,btnSize)];
-    [rightButton setFrame:CGRectMake(self.width/2-btnSize/2+80* (self.width/screenWidth), self.height/2-btnSize/2, btnSize,btnSize)];
-    [joystick setFrame:CGRectMake(self.width/2-btnSize/2, self.height/2-btnSize/2, btnSize, btnSize)];
+    double joysize = defaultJoySize* (self.width/screenWidth);
+    
+    [topButton setFrame:CGRectMake(self.width/2-btnSize/2, self.height/2-btnSize/2-100* (self.width/screenWidth), btnSize,btnSize)];
+    [bottomButton setFrame:CGRectMake(self.width/2-btnSize/2, self.height/2-btnSize/2+100* (self.width/screenWidth), btnSize,btnSize)];
+    [leftButton setFrame:CGRectMake(self.width/2-btnSize/2-100* (self.width/screenWidth), self.height/2-btnSize/2, btnSize,btnSize)];
+    [rightButton setFrame:CGRectMake(self.width/2-btnSize/2+100* (self.width/screenWidth), self.height/2-btnSize/2, btnSize,btnSize)];
+    [joystick setFrame:CGRectMake(self.width/2-joysize/2, self.height/2-joysize/2, joysize, joysize)];
     
     [self initView:topView forButton:topButton];
     [self initView:bottomView forButton:bottomButton];
