@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NewLend.h"
+@class MainView;
+
+
 @interface MainView : UIView<UIGestureRecognizerDelegate>
 {
     UIView*leftButton;

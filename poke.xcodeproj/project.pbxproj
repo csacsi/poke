@@ -54,6 +54,7 @@
 		F24E612B17FF64840048254B /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612A17FF64840048254B /* MainView.m */; };
 		F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */; };
 		F2B5551317FF925A00411F7A /* NewLend.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551217FF925A00411F7A /* NewLend.m */; };
+		F2B5551517FF95AA00411F7A /* newLendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5551417FF95AA00411F7A /* newLendView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		F2B5551117FF925A00411F7A /* NewLend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewLend.h; path = Views/InputViews/NewLend.h; sourceTree = "<group>"; };
 		F2B5551217FF925A00411F7A /* NewLend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewLend.m; path = Views/InputViews/NewLend.m; sourceTree = "<group>"; };
+		F2B5551417FF95AA00411F7A /* newLendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = newLendView.xib; path = Views/InputViews/newLendView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 			children = (
 				F2B5551117FF925A00411F7A /* NewLend.h */,
 				F2B5551217FF925A00411F7A /* NewLend.m */,
+				F2B5551417FF95AA00411F7A /* newLendView.xib */,
 			);
 			name = InputViews;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F23AD97417FF17DB00C181FF /* Images.xcassets in Resources */,
+				F2B5551517FF95AA00411F7A /* newLendView.xib in Resources */,
 				F23AD96317FF17DB00C181FF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

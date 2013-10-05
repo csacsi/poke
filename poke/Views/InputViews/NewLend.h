@@ -11,6 +11,7 @@
 @interface NewLend : UIView
 {
     UITextField*name;
+    UIButton*backBtn;
 }
 
 @end

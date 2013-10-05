@@ -56,6 +56,8 @@
         [pan setDelegate:self];
         
         [self addGestureRecognizer:pan];
+        
+        [[NSNotificationCenter defaultCenter ]addObserver:self selector:@selector(switchBackToMainViewWithViewWitNotification:) name:eventMainViewBackToNormal object:nil];
     }
     return self;
 }
@@ -155,6 +157,10 @@
 //            [self switchBackToMainViewWithView:view];
         } repeats:NO];
     }];
+}
+-(void)switchBackToMainViewWithViewWitNotification:(NSNotification*)not
+{
+    [self switchBackToMainViewWithView:not.object];
 }
 
 -(void)switchBackToMainViewWithView:(UIView*)view

@@ -11,4 +11,5 @@
 
 
 #define eventObjectsLoaded @"eventObjectsLoaded"
+#define eventMainViewBackToNormal @"eventMainViewBackToNormal"
 #endif
