@@ -16,4 +16,6 @@
 @property NSString* email;
 @property (nonatomic,strong)NSString* objectId;
 
++ (id)name:(NSString *)name email:(NSString *)email;
+
 @end

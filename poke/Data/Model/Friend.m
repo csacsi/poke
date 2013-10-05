@@ -10,6 +10,10 @@
 
 @implementation Friend
 
+@synthesize name;
+@synthesize email;
+
+
 -(void) setRowId:(id<NSCopying>)rowId
 {
     self.objectId = (NSString*)rowId;
@@ -18,6 +22,15 @@
 -(id<NSCopying>)getRowId
 {
     return self.objectId;
+}
+
+
++ (id)name:(NSString *)name email:(NSString *)email
+{
+    Friend *newFriend = [[self alloc] init];
+    newFriend.email = email;
+    newFriend.name = name;
+    return newFriend;
 }
 
 +(NSString*) getRowIdName

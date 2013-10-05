@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NewLend.h"
+#import "AddAndSearchFriendsViewController.h"
 @class MainView;
 
 
@@ -26,7 +27,7 @@
     CGPoint startPoint;
     
     NewLend*topView;
-    UIView*bottomView;
+    AddAndSearchFriendsViewController *bottomViewController;
     UIView*leftView;
     UIView*rightView;
     

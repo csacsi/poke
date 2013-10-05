@@ -46,8 +46,14 @@
         [topView setAlpha:0];
         [self addSubview:topView];
         
+        bottomViewController = [[AddAndSearchFriendsViewController alloc]initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
+        bottomViewController.view.layer.anchorPoint = CGPointMake(bottomButton.frame.origin.x/self.frame.size.width, bottomButton.frame.origin.y/self.frame.size.height);
+        [bottomViewController.view setFrame:CGRectMake(bottomButton.center.x-defaultBtnSize/3.5, bottomButton.frame.origin.y, screenWidth/(screenHeight/defaultBtnSize), screenHeight/(screenHeight/defaultBtnSize))];
+        [bottomViewController.view setAlpha:0];
+        [self addSubview:bottomViewController.view];
         
-        bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        
+
         rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         
@@ -99,7 +105,7 @@
             else if (CGRectContainsPoint(bottomButton.frame, location))
             {
                 NSLog(@"Bottom function");
-                [bottomButton setBackgroundColor:[UIColor redColor]];
+                [self switchToView:bottomViewController.view fromBtn:bottomButton];
             }
             else if (CGRectContainsPoint(leftButton.frame, location))
             {
@@ -175,7 +181,7 @@
      {
          [dummyView removeFromSuperview];
          [self setShowBtns:YES];
-         [topView setAlpha:0];
+         [view setAlpha:0];
          [grabbedBtn setAlpha:1];
          [joystick setAlpha:1];
      }];
