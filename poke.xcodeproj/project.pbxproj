@@ -11,6 +11,7 @@
 		E898828417FF2EC800180448 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828317FF2EC800180448 /* Profile.m */; };
 		E898828A17FF2F4E00180448 /* LendInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = E898828917FF2F4E00180448 /* LendInteraction.m */; };
 		E89882C417FF391800180448 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89882C317FF391800180448 /* Parse.framework */; };
+		E89882C717FF8F5200180448 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E89882C617FF8F5200180448 /* Message.m */; };
 		F23AD95917FF17DB00C181FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95817FF17DB00C181FF /* Foundation.framework */; };
 		F23AD95B17FF17DB00C181FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */; };
 		F23AD95D17FF17DB00C181FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD95C17FF17DB00C181FF /* UIKit.framework */; };
@@ -72,6 +73,8 @@
 		E898828817FF2F4E00180448 /* LendInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendInteraction.h; sourceTree = "<group>"; };
 		E898828917FF2F4E00180448 /* LendInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendInteraction.m; sourceTree = "<group>"; };
 		E89882C317FF391800180448 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = poke/Parse.framework; sourceTree = "<group>"; };
+		E89882C517FF8F5200180448 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Model/Message.h; sourceTree = "<group>"; };
+		E89882C617FF8F5200180448 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Model/Message.m; sourceTree = "<group>"; };
 		F23AD95517FF17DB00C181FF /* poke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD95817FF17DB00C181FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F23AD95A17FF17DB00C181FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				E898828317FF2EC800180448 /* Profile.m */,
 				E898828817FF2F4E00180448 /* LendInteraction.h */,
 				E898828917FF2F4E00180448 /* LendInteraction.m */,
+				E89882C517FF8F5200180448 /* Message.h */,
+				E89882C617FF8F5200180448 /* Message.m */,
 			);
 			name = Model;
 			path = Data;
@@ -500,6 +505,7 @@
 				F23AD9F417FF519000C181FF /* ParseObjectHelper.m in Sources */,
 				F24E612B17FF64840048254B /* MainView.m in Sources */,
 				F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */,
+				E89882C717FF8F5200180448 /* Message.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
 				F23AD9E317FF514000C181FF /* BaseDataObject.m in Sources */,
