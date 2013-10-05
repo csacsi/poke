@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAndSearchFriendsViewController">
             <connections>
+                <outlet property="searchDisplayController" destination="vNn-Cq-rhy" id="46Q-Ty-DnZ"/>
                 <outlet property="table" destination="EBt-gT-oIg" id="fCJ-Yc-xO5"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -26,7 +27,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EBt-gT-oIg">
-                    <rect key="frame" x="36" y="263" width="249" height="285"/>
+                    <rect key="frame" x="36" y="91" width="249" height="285"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -34,10 +35,28 @@
                         <outlet property="delegate" destination="-1" id="kX0-81-m9y"/>
                     </connections>
                 </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jk0-5p-wiT">
+                    <rect key="frame" x="36" y="47" width="249" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="qNQ-ss-TYR"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <searchDisplayController id="vNn-Cq-rhy">
+            <connections>
+                <outlet property="delegate" destination="-1" id="05u-Tq-oTT"/>
+                <outlet property="searchBar" destination="Jk0-5p-wiT" id="By2-Qn-fSf"/>
+                <outlet property="searchContentsController" destination="-1" id="QjD-bC-NQt"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="rdx-y7-gQ8"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="WV3-SY-OuD"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>

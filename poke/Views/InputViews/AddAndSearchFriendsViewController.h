@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddAndSearchFriendsViewController : UIViewController
+@interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+
+@property (strong,nonatomic) NSMutableArray *filteredFriendsArray;
+@property IBOutlet UISearchBar *friendsSearchBar;
+
 @property (strong, nonatomic) IBOutlet UITableView *table;
 - (IBAction)backPressed:(id)sender;
-
 
 @property (strong, nonatomic) NSArray *friendsArray;
 
