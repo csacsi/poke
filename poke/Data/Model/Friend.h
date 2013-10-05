@@ -16,6 +16,6 @@
 @property NSString* email;
 @property (nonatomic,strong)NSString* objectId;
 
-+ (id)name:(NSString *)name email:(NSString *)email;
++ (id)name:(NSString *)name email:(NSString *)email picture:(UIImage *)picture;
 
 @end

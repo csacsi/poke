@@ -127,10 +127,18 @@
     CFStringRef firstName, lastName;
     firstName = ABRecordCopyValue(person, kABPersonFirstNameProperty);
     lastName  = ABRecordCopyValue(person, kABPersonLastNameProperty);
+    NSData *my_nsdata;
+    
+    if(ABPersonHasImageData(person)) {
+        CFDataRef imgData = ABRecordCopyValue(person, kABPersonImageFormatThumbnail);
+        my_nsdata = (__bridge_transfer NSData*)imgData;
+        
+    }
     
     Friend *friend = [ Friend
                       name: [NSString stringWithFormat:@"%@ %@",firstName,lastName]
                       email:  (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonEmailProperty)
+                      picture: [UIImage imageWithData:my_nsdata]
                     ];
     [friendsArray addObject:friend];
     [self.table reloadData];

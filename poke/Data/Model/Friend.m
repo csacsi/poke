@@ -25,11 +25,12 @@
 }
 
 
-+ (id)name:(NSString *)name email:(NSString *)email
++ (id)name:(NSString *)name email:(NSString *)email picture:(UIImage *)picture
 {
     Friend *newFriend = [[self alloc] init];
     newFriend.email = email;
     newFriend.name = name;
+    newFriend.picture = picture;
     return newFriend;
 }
 
