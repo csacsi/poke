@@ -59,6 +59,7 @@
 		F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */; };
 		F2B5551D17FF9CED00411F7A /* ItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551C17FF9CED00411F7A /* ItemsView.m */; };
 		F2B5552217FFAB4C00411F7A /* UIView+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5552117FFAB4C00411F7A /* UIView+Categories.m */; };
+		F2B5552517FFB35F00411F7A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5552417FFB35F00411F7A /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,8 @@
 		F2B5551C17FF9CED00411F7A /* ItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsView.m; path = Views/ItemsView/ItemsView.m; sourceTree = "<group>"; };
 		F2B5552017FFAB4C00411F7A /* UIView+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Categories.h"; sourceTree = "<group>"; };
 		F2B5552117FFAB4C00411F7A /* UIView+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Categories.m"; sourceTree = "<group>"; };
+		F2B5552317FFB35F00411F7A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		F2B5552417FFB35F00411F7A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				E898828917FF2F4E00180448 /* LendInteraction.m */,
 				E89882C517FF8F5200180448 /* Message.h */,
 				E89882C617FF8F5200180448 /* Message.m */,
+				F2B5552317FFB35F00411F7A /* DataManager.h */,
+				F2B5552417FFB35F00411F7A /* DataManager.m */,
 			);
 			name = Model;
 			path = Data;
@@ -562,6 +567,7 @@
 				F2B5551317FF925A00411F7A /* NewLend.m in Sources */,
 				E89882C717FF8F5200180448 /* Message.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
+				F2B5552517FFB35F00411F7A /* DataManager.m in Sources */,
 				F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */,
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
 				E89882CA17FF9AB100180448 /* AddTableViewController.m in Sources */,

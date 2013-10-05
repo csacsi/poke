@@ -42,7 +42,6 @@
         topView.layer.anchorPoint = CGPointMake(topButton.frame.origin.x/self.frame.size.width, topButton.frame.origin.y/self.frame.size.height);
         [topView setFrame:CGRectMake(topButton.center.x-defaultBtnSize/3.5, topButton.frame.origin.y,screenWidth/(screenHeight/defaultBtnSize) ,screenHeight/(screenHeight/defaultBtnSize))];
 
-        NSLog(@"%@",NSStringFromCGRect(topView.frame));
         [topView setAlpha:0];
         [self addSubview:topView];
         
@@ -51,7 +50,6 @@
         [bottomViewController.view setFrame:CGRectMake(bottomButton.center.x-defaultBtnSize/3.5, bottomButton.frame.origin.y, screenWidth/(screenHeight/defaultBtnSize), screenHeight/(screenHeight/defaultBtnSize))];
         [bottomViewController.view setAlpha:0];
         [self addSubview:bottomViewController.view];
-        NSLog(@"%@",NSStringFromCGRect(bottomViewController.view.frame));
         
         
 
@@ -60,8 +58,7 @@
         rightView.layer.anchorPoint = CGPointMake(rightButton.frame.origin.x/self.frame.size.width, rightButton.frame.origin.y/self.frame.size.height);
         [rightView setFrame:CGRectMake(rightButton.center.x-defaultBtnSize/3.5, rightButton.frame.origin.y,screenWidth/(screenHeight/defaultBtnSize) ,screenHeight/(screenHeight/defaultBtnSize))];
         
-        NSLog(@"%@",NSStringFromCGRect(rightView.frame));
-        [rightView setAlpha:1];
+        [rightView setAlpha:0];
         [self addSubview:rightView];
 
         
@@ -158,7 +155,7 @@
     btn.alpha = 0;
     originalRect= view.frame;
     dummyView = [[UIImageView alloc]initWithImage:[self screenshot]];
-    [self addSubview:dummyView];
+    [self insertSubview:dummyView belowSubview:view];
     [self setShowBtns:NO];
     
     [dummyView.layer setAnchorPoint:CGPointMake(btn.center.x / self.frame.size.width, btn.center.y / self.frame.size.height)];
@@ -184,7 +181,7 @@
 
 -(void)switchBackToMainViewWithView:(UIView*)view
 {
-    [self addSubview:dummyView];
+    [self insertSubview:dummyView belowSubview:view];
     [UIView animateWithDuration:0.5 animations:^{
         
         [view setFrame:originalRect];

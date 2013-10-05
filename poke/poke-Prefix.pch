@@ -13,6 +13,7 @@
 #import "constants.h"
 #import "NSTimer+Blocks.h"
 #import "UIView+Categories.h"
+#import "DataManager.h"
 
 #define isiPad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 

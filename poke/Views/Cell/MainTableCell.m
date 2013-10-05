@@ -17,6 +17,7 @@
     if (self) {
         // Initialization code
         [self setBackgroundColor:[UIColor greenColor]];
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }
@@ -33,6 +34,7 @@
     _model = model;
     [self.textLabel setText:_model.name];
     [self setBackgroundColor:[UIColor interpolateColorFrom:[UIColor redColor] to:[UIColor greenColor] lerp:255.0*_model.status/100.0]];
+    
     
 }
 @end

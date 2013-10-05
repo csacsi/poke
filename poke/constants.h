@@ -12,4 +12,6 @@
 
 #define eventObjectsLoaded @"eventObjectsLoaded"
 #define eventMainViewBackToNormal @"eventMainViewBackToNormal"
+
+#define eventNewLendInteraction @"eventNewLendInteraction"
 #endif
