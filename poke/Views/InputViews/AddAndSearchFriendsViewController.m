@@ -107,10 +107,44 @@
 }
 
 - (IBAction)createAction:(id)sender {
-    Friend *friend = [ Friend name: lastSearchText email:@"csomakk@gmail.com" ];
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    [self dismissViewControllerAnimated:YES completion: nil];
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissViewControllerAnimated:YES completion: nil];
+}
+
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+    
+    CFStringRef firstName, lastName;
+    firstName = ABRecordCopyValue(person, kABPersonFirstNameProperty);
+    lastName  = ABRecordCopyValue(person, kABPersonLastNameProperty);
+    
+    Friend *friend = [ Friend
+                      name: [NSString stringWithFormat:@"%@ %@",firstName,lastName]
+                      email:  (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonEmailProperty)
+                    ];
     [friendsArray addObject:friend];
     [self.table reloadData];
+    [self dismissViewControllerAnimated:YES completion: nil];
     
+    return NO;
+}
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
 }
 
 @end
