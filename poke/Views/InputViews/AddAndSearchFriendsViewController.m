@@ -65,13 +65,7 @@
 {
     [super viewDidLoad];
     
-    friendsArray = [ NSMutableArray arrayWithObjects:
-                    [ Friend name:@"Csomak" email:@"csomakk@gmail.com" ]
-                    ,[ Friend name:@"Csacsi" email:@"huncsacsika@gmail.com" ]
-                    ,[ Friend name:@"Jezus" email:@"csomakk@gmail.com" ]
-                    ,[ Friend name:@"Jenny" email:@"csomakk@gmail.com" ]
-                    ,nil ];
-    
+    friendsArray = [DataManager getInstance].myFriends;
     
     [self.table reloadData];
     self.filteredFriendsArray = [NSMutableArray arrayWithCapacity:[friendsArray count]];
