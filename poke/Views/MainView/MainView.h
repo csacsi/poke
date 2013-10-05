@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewLend.h"
+
 #import "AddAndSearchFriendsViewController.h"
 #import "ItemsView.h"
-@class MainView;
-
+#import "NewLend.h"
 
 @interface MainView : UIView<UIGestureRecognizerDelegate>
 {

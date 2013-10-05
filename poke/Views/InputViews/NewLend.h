@@ -7,11 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddAndSearchFriendsViewController.h"
+#import "ItemsView.h"
 
-@interface NewLend : UIView
+
+@interface NewLend :UIView
 {
-    UITextField*name;
     UIButton*backBtn;
+    
+    UIView*leftButton;
+    UIView*rightButton;
+    UIView*topButton;
+    UIView*bottomButton;
+    
+    UIView* joystick;
+    
+    UIPanGestureRecognizer*pan;
+    
+    UIView*grabbedBtn;
+    CGPoint startPoint;
+    
+    AddAndSearchFriendsViewController *bottomViewController;
+    UIView*leftView;
+    ItemsView*rightView;
+    
+    UIImageView * dummyView;
+    CGRect originalRect;
+
+    
 }
 
 @end
