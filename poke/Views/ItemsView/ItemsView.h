@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewWithJoypad.h"
 
-@interface ItemsView : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface ItemsView : UIView<UITableViewDataSource,UITableViewDelegate,ViewWithJoypadDelegate>
 {
     UIButton* backBtn;
     UITableView*tbl;
     NSMutableArray*list;
     NSMutableArray*friends;
 }
+
+@property(nonatomic,strong)id<ViewWithJoypadDelegate>delegate;
 
 @end
