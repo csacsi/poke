@@ -7,6 +7,7 @@
 //
 
 #import "MainView.h"
+
 #define defaultBtnSize 80
 @implementation MainView
 
@@ -36,7 +37,7 @@
         [self addSubview:rightButton];
         [self addSubview:joystick];
         
-        topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        topView = [[NewLend alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         [topView setBackgroundColor:[UIColor greenColor]];
         topView.layer.anchorPoint = CGPointMake(topButton.frame.origin.x/self.frame.size.width, topButton.frame.origin.y/self.frame.size.height);
         [topView setFrame:CGRectMake(topButton.center.x-defaultBtnSize/3.5, topButton.frame.origin.y,screenWidth/(screenHeight/defaultBtnSize) ,screenHeight/(screenHeight/defaultBtnSize))];
@@ -91,58 +92,7 @@
         if (grabbedBtn) {
             if (CGRectContainsPoint(topButton.frame, location))
             {
-                NSLog(@"Top function");
-                [grabbedBtn setAlpha:0];
-                topButton.alpha = 0;
-                UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
-                [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-                UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-                UIGraphicsEndImageContext();
-                
-                [grabbedBtn setAlpha:0];
-                // hack, helps w/ our colors when blurring
-                //NSData *imageData = UIImageJPEGRepresentation(image, 1); // convert to jpeg
-                // image = [UIImage imageWithData:imageData];
-                
-                
-                __block UIImageView * dummyView = [[UIImageView alloc]initWithImage:image];
-                [self addSubview:dummyView];
-                [topButton setAlpha:0];
-                [bottomButton setAlpha:0];
-                [leftButton setAlpha:0];
-                [rightButton setAlpha:0];
-                
-                [dummyView.layer setAnchorPoint:CGPointMake(topButton.center.x / self.frame.size.width, topButton.center.y / self.frame.size.height)];
-                [dummyView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-                [topButton setBackgroundColor:[UIColor redColor]];
-                [topView setAlpha:1];
-
-                [UIView animateWithDuration:0.5 animations:^{
-                    dummyView.transform = CGAffineTransformMakeScale(4, 4);
-                    [topView setFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-                    
-                }completion:^(BOOL finished) {
-                    [dummyView removeFromSuperview];
-                    [NSTimer scheduledTimerWithTimeInterval:0.5 block:^{
-                        [self addSubview:dummyView];
-                        [UIView animateWithDuration:0.5 animations:^{
-                            [topView setFrame:CGRectMake(topButton.center.x-defaultBtnSize/3.5, topButton.frame.origin.y,screenWidth/(screenHeight/defaultBtnSize) ,screenHeight/(screenHeight/defaultBtnSize))];
-                            dummyView.transform = CGAffineTransformMakeScale(1, 1);
-                        }completion:^(BOOL finished) {
-                            [dummyView removeFromSuperview];
-                            [topButton setAlpha:1];
-                            [bottomButton setAlpha:1];
-                            [leftButton setAlpha:1];
-                            [rightButton setAlpha:1];
-                            [topView setAlpha:0];
-                        }];
-                    } repeats:NO];
-                }];
-                
-                
-                
-                
-                
+                [self switchToView:topView fromBtn:topButton];
             }
             else if (CGRectContainsPoint(bottomButton.frame, location))
             {
@@ -172,6 +122,67 @@
         }
     }
     
+}
+
+-(void) setShowBtns:(BOOL)show
+{
+    [topButton setAlpha:show];
+    [bottomButton setAlpha:show];
+    [leftButton setAlpha:show];
+    [rightButton setAlpha:show];
+}
+-(void)switchToView:(UIView*)view fromBtn:(UIView*)btn
+{
+    [grabbedBtn setAlpha:0];
+    btn.alpha = 0;
+    originalRect= view.frame;
+    dummyView = [[UIImageView alloc]initWithImage:[self screenshot]];
+    [self addSubview:dummyView];
+    [self setShowBtns:NO];
+    
+    [dummyView.layer setAnchorPoint:CGPointMake(btn.center.x / self.frame.size.width, btn.center.y / self.frame.size.height)];
+    [dummyView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+
+    [view setAlpha:1];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        dummyView.transform = CGAffineTransformMakeScale(4, 4);
+        [view setFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        
+    }completion:^(BOOL finished) {
+        [dummyView removeFromSuperview];
+        [NSTimer scheduledTimerWithTimeInterval:0.5 block:^{
+//            [self switchBackToMainViewWithView:view];
+        } repeats:NO];
+    }];
+}
+
+-(void)switchBackToMainViewWithView:(UIView*)view
+{
+    [self addSubview:dummyView];
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        [view setFrame:originalRect];
+        dummyView.transform = CGAffineTransformMakeScale(1, 1);
+        
+    }completion:^(BOOL finished)
+     {
+         [dummyView removeFromSuperview];
+         [self setShowBtns:YES];
+         [topView setAlpha:0];
+         [grabbedBtn setAlpha:1];
+         [joystick setAlpha:1];
+     }];
+
+}
+
+-(UIImage*)screenshot
+{
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

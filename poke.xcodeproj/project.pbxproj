@@ -52,6 +52,7 @@
 		F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9F217FF519000C181FF /* SQLiteDataHandler.m */; };
 		F24E612B17FF64840048254B /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612A17FF64840048254B /* MainView.m */; };
 		F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */; };
+		F2B5551317FF925A00411F7A /* NewLend.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551217FF925A00411F7A /* NewLend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		F24E612A17FF64840048254B /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Views/MainView/MainView.m; sourceTree = "<group>"; };
 		F24E612E17FF88AD0048254B /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		F2B5551117FF925A00411F7A /* NewLend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewLend.h; path = Views/InputViews/NewLend.h; sourceTree = "<group>"; };
+		F2B5551217FF925A00411F7A /* NewLend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewLend.m; path = Views/InputViews/NewLend.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				F23AD9CB17FF2EEF00C181FF /* Cell */,
+				F2B5551017FF923F00411F7A /* InputViews */,
 				F24E612C17FF64890048254B /* MainView */,
 			);
 			name = Views;
@@ -395,6 +399,15 @@
 				F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */,
 			);
 			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		F2B5551017FF923F00411F7A /* InputViews */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5551117FF925A00411F7A /* NewLend.h */,
+				F2B5551217FF925A00411F7A /* NewLend.m */,
+			);
+			name = InputViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +513,7 @@
 				F23AD9F417FF519000C181FF /* ParseObjectHelper.m in Sources */,
 				F24E612B17FF64840048254B /* MainView.m in Sources */,
 				F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */,
+				F2B5551317FF925A00411F7A /* NewLend.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
 				F23AD9E317FF514000C181FF /* BaseDataObject.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NewLend.h"
 @interface MainView : UIView<UIGestureRecognizerDelegate>
 {
     UIView*leftButton;
@@ -22,10 +22,13 @@
     UIView*grabbedBtn;
     CGPoint startPoint;
     
-    UIView*topView;
+    NewLend*topView;
     UIView*bottomView;
     UIView*leftView;
     UIView*rightView;
+    
+    UIImageView * dummyView;
+    CGRect originalRect;
     
 }
 
