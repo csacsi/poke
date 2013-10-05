@@ -110,7 +110,7 @@
 - (IBAction)createAction:(id)sender {
     ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
-    [self dismissViewControllerAnimated:YES completion: nil];
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)peoplePickerNavigationControllerDidCancel:
