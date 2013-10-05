@@ -8,7 +8,7 @@
 
 #import "AddAndSearchFriendsViewController.h"
 #import "Friend.h"
-
+#import "AppDelegate.h"
 @interface AddAndSearchFriendsViewController ()
 
 @end
@@ -26,6 +26,7 @@
     if (self) {
         // Custom initialization
         [self.view setBackgroundColor:[UIColor redColor]];
+        _allowDismiss = NO;
     }
     return self;
 }
@@ -79,7 +80,13 @@
 }
 
 - (IBAction)backPressed:(id)sender {
+    if (_allowDismiss) {
+        [ApplicationDelegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    }
+    else
+    {
     [self.delegate viewWithJoypadBackPressed:self.view];
+    }
 }
 
 #pragma mark Content Filtering
@@ -110,6 +117,7 @@
 - (IBAction)createAction:(id)sender {
     ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
+    
     [self dismissViewControllerAnimated:YES completion: nil];
 }
 
@@ -148,4 +156,13 @@
     return NO;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (_allowDismiss) {
+        if(_personDelegate){
+            [_personDelegate personSelected:friendsArray[indexPath.row]];
+        }
+        [self backPressed:nil];
+    }
+}
 @end

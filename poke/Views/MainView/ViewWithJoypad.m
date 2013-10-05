@@ -38,7 +38,6 @@
         [self addSubview:joystick];
         
         
-        
         topView  = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height)];
         rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height)];
         leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height)];
@@ -49,10 +48,14 @@
         [self initView:bottomView forButton:bottomButton];
         
         
-        pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(uiTapped:)];
+        pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(uiPanned:)];
         [pan setDelegate:self];
-        
         [self addGestureRecognizer:pan];
+        
+        tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(uiTapped:)];
+        [tap setDelegate:self];
+        [tap setNumberOfTouchesRequired:1];
+        [self addGestureRecognizer:tap];
        
     }
     return self;
@@ -91,8 +94,34 @@
     [self initView:leftView forButton:leftButton];
     [self initView:rightView forButton:rightButton];
 }
-
 -(void)uiTapped:(UITapGestureRecognizer*)gesture
+{
+    CGPoint location = [gesture locationInView:self];
+    if ([gesture state] == UIGestureRecognizerStateEnded)
+    {
+            if (CGRectContainsPoint(topButton.frame, location))
+            {
+                [self switchToView:topView fromBtn:topButton];
+            }
+            else if (CGRectContainsPoint(bottomButton.frame, location))
+            {
+                [self switchToView:bottomView fromBtn:bottomButton];
+            }
+            else if (CGRectContainsPoint(leftButton.frame, location))
+            {
+                [self switchToView:leftView fromBtn:leftButton];
+            }
+            else if (CGRectContainsPoint(rightButton.frame, location))
+            {
+                [self switchToView:rightView fromBtn:rightButton];
+            }
+            else if(CGRectContainsPoint(joystick.frame, location)){
+                [self joypadPressed];
+            }
+    }
+}
+
+-(void)uiPanned:(UIPanGestureRecognizer*)gesture
 {
     NSLog(@"tapped");
     CGPoint location = [gesture locationInView:self];
@@ -202,6 +231,10 @@
          [joystick setAlpha:1];
      }];
     
+}
+-(void)joypadPressed
+{
+    NSLog(@"joypadPressed");
 }
 
 /*

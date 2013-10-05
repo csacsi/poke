@@ -8,7 +8,7 @@
 //
 
 #import "NewLend.h"
-
+#import "AppDelegate.h"
 @implementation NewLend
 
 - (id)initWithFrame:(CGRect)frame
@@ -20,6 +20,8 @@
         [backBtn setTitle:@"<" forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:backBtn];
+        
+        [self initBtnImages];
     }
     return self;
 }
@@ -42,7 +44,34 @@
     }
 }
 
+-(void)switchToView:(UIView *)view fromBtn:(UIImageView *)btn{
+    NSLog(@"vava");
+    [self initBtnImages];
+    [btn setBackgroundColor:[UIColor yellowColor]];
+}
+
+-(void)initBtnImages
+{
+    [topButton setBackgroundColor:[UIColor colorWithRed:255 green:100 blue:100 alpha:1]];
+    [leftButton setBackgroundColor:[UIColor colorWithRed:100 green:255 blue:100 alpha:1]];
+    [rightButton setBackgroundColor:[UIColor colorWithRed:100 green:100 blue:255 alpha:1]];
+    [bottomButton setBackgroundColor:[UIColor colorWithRed:150 green:110 blue:29 alpha:1]];
+}
+
+-(void)joypadPressed{
+    friendsController = [[AddAndSearchFriendsViewController alloc] initWithNibName:@"AddAndSearchFriendsViewController" bundle:[NSBundle mainBundle]];
+    [friendsController setPersonDelegate:self];
+    [friendsController setAllowDismiss:YES];
+    [ApplicationDelegate.rootViewController presentViewController:friendsController animated:YES completion:nil];
+}
+
+-(void)personSelected:(Friend *)person
+{
+    borrower = person;
+    [joystick setImage:borrower.picture];
+}
 /*
+ 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
