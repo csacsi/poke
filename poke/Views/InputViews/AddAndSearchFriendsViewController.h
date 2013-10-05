@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Distinction. All rights reserved.
 //
 
+#import <AddressBookUI/AddressBookUI.h>
 #import <UIKit/UIKit.h>
 
-@interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface AddAndSearchFriendsViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate, ABPeoplePickerNavigationControllerDelegate>
 
 @property (strong,nonatomic) NSMutableArray *filteredFriendsArray;
 @property IBOutlet UISearchBar *friendsSearchBar;
