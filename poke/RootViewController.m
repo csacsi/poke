@@ -10,6 +10,8 @@
 #import "MainTableCell.h"
 
 #import "LendInteraction.h"
+#import "Message.h"
+#import "ParseDataHandler.h"
 
 @interface RootViewController ()
 
@@ -35,6 +37,7 @@
         mainView = [[MainView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         [self.view addSubview:mainView];
         
+       
         
     }
     return self;
@@ -42,7 +45,7 @@
 
 -(void)initParse
 {
-    [Parse setApplicationId:@"7rie26iRzAwT5W1AlPweu6hFcIbqRT5DT9cmWJQb" clientKey:@"sk4dkLvdjQALhli0O1cPjU2Wpqng28e0Fnc1Q3wr"];
+    [Parse setApplicationId:@"es6gaHEsuLTK94BfIsTbsadbEnCeb065c32dwcMq" clientKey:@"WWbpWKeHZwK4JEgQXIVUDPOWGFxA63S0ZCxtruWG"];
     
     if (![PFUser currentUser])
     {
@@ -56,6 +59,19 @@
         
         [self presentViewController:loginVC animated:YES completion:nil];
         
+        
+        
+    } else {
+        
+        PFObject *msgObject = [PFObject objectWithClassName:@"Message"];
+        [msgObject setObject: @"derjugoBaszod" forKey:@"text"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"cancelled"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"sent"];
+        [msgObject setObject:[NSNumber numberWithBool:NO] forKey:@"isSMS"];
+        [msgObject setObject: @"csomakk@gmail.com" forKey:@"to"];
+        [msgObject setObject: [NSDate date] forKey:@"date"];
+        [msgObject saveInBackground];
+ 
     }
 }
 

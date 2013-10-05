@@ -134,18 +134,30 @@
     CFStringRef firstName, lastName;
     firstName = ABRecordCopyValue(person, kABPersonFirstNameProperty);
     lastName  = ABRecordCopyValue(person, kABPersonLastNameProperty);
-    NSData *my_nsdata;
+    UIImage *img;
     
     if(ABPersonHasImageData(person)) {
-        CFDataRef imgData = ABRecordCopyValue(person, kABPersonImageFormatThumbnail);
-        my_nsdata = (__bridge_transfer NSData*)imgData;
+ 
+        img = [UIImage imageWithData:(__bridge NSData *)ABPersonCopyImageDataWithFormat(person, kABPersonImageFormatThumbnail)];
         
+        
+    }
+    
+    NSString* phone;
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,
+                                                     kABPersonPhoneProperty);
+    if (ABMultiValueGetCount(phoneNumbers) > 0) {
+        phone = (__bridge_transfer NSString*)
+        ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+    } else {
+        phone = @"[None]";
     }
     
     Friend *friend = [ Friend
                       name: [NSString stringWithFormat:@"%@ %@",firstName,lastName]
                       email:  (__bridge_transfer NSString*)ABRecordCopyValue(person, kABPersonEmailProperty)
-                      picture: [UIImage imageWithData:my_nsdata]
+                      picture: img
+                      phone: phone
                     ];
     [friendsArray addObject:friend];
     [self.table reloadData];

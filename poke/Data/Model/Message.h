@@ -7,8 +7,9 @@
 //
 
 #import "BaseDataObject.h"
+#import "DataRowProtocoll.h"
 
-@interface Message : BaseDataObject
+@interface Message : BaseDataObject<DataRowProtocoll>
 
 @property (nonatomic,strong)NSString* objectId;
 @property BOOL cancelled;
