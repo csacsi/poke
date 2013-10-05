@@ -57,6 +57,8 @@
 		F2B5551317FF925A00411F7A /* NewLend.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551217FF925A00411F7A /* NewLend.m */; };
 		F2B5551917FF982600411F7A /* AddAndSearchFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551717FF982600411F7A /* AddAndSearchFriendsViewController.m */; };
 		F2B5551A17FF982600411F7A /* AddAndSearchFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */; };
+		F2B5551D17FF9CED00411F7A /* ItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5551C17FF9CED00411F7A /* ItemsView.m */; };
+		F2B5552217FFAB4C00411F7A /* UIView+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5552117FFAB4C00411F7A /* UIView+Categories.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,10 @@
 		F2B5551617FF982600411F7A /* AddAndSearchFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddAndSearchFriendsViewController.h; path = Views/InputViews/AddAndSearchFriendsViewController.h; sourceTree = "<group>"; };
 		F2B5551717FF982600411F7A /* AddAndSearchFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddAndSearchFriendsViewController.m; path = Views/InputViews/AddAndSearchFriendsViewController.m; sourceTree = "<group>"; };
 		F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddAndSearchFriendsViewController.xib; path = Views/InputViews/AddAndSearchFriendsViewController.xib; sourceTree = "<group>"; };
+		F2B5551B17FF9CED00411F7A /* ItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsView.h; path = Views/ItemsView/ItemsView.h; sourceTree = "<group>"; };
+		F2B5551C17FF9CED00411F7A /* ItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsView.m; path = Views/ItemsView/ItemsView.m; sourceTree = "<group>"; };
+		F2B5552017FFAB4C00411F7A /* UIView+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Categories.h"; sourceTree = "<group>"; };
+		F2B5552117FFAB4C00411F7A /* UIView+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Categories.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +343,7 @@
 		F23AD9CA17FF2EDF00C181FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F2B5551E17FF9CF300411F7A /* Items */,
 				F23AD9CB17FF2EEF00C181FF /* Cell */,
 				F2B5551017FF923F00411F7A /* InputViews */,
 				F24E612C17FF64890048254B /* MainView */,
@@ -356,6 +363,7 @@
 		F23AD9CF17FF49FE00C181FF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F2B5551F17FFAB4C00411F7A /* UIView */,
 				F24E612D17FF88AD0048254B /* NSTimer */,
 				F23AD9D017FF49FE00C181FF /* UIColor */,
 			);
@@ -426,6 +434,24 @@
 				F2B5551817FF982600411F7A /* AddAndSearchFriendsViewController.xib */,
 			);
 			name = InputViews;
+			sourceTree = "<group>";
+		};
+		F2B5551E17FF9CF300411F7A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5551B17FF9CED00411F7A /* ItemsView.h */,
+				F2B5551C17FF9CED00411F7A /* ItemsView.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		F2B5551F17FFAB4C00411F7A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5552017FFAB4C00411F7A /* UIView+Categories.h */,
+				F2B5552117FFAB4C00411F7A /* UIView+Categories.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +555,7 @@
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
 				E898828417FF2EC800180448 /* Profile.m in Sources */,
 				E898828017FF2E4500180448 /* Friend.m in Sources */,
+				F2B5552217FFAB4C00411F7A /* UIView+Categories.m in Sources */,
 				F23AD9F417FF519000C181FF /* ParseObjectHelper.m in Sources */,
 				F24E612B17FF64840048254B /* MainView.m in Sources */,
 				F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */,
@@ -539,6 +566,7 @@
 				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
 				E89882CA17FF9AB100180448 /* AddTableViewController.m in Sources */,
 				F23AD9E317FF514000C181FF /* BaseDataObject.m in Sources */,
+				F2B5551D17FF9CED00411F7A /* ItemsView.m in Sources */,
 				F23AD9E417FF514000C181FF /* CompositeDataHandler.m in Sources */,
 				F23AD9D317FF49FE00C181FF /* UIColor+Utils.m in Sources */,
 				F23AD9F317FF519000C181FF /* ParseDataHandler.m in Sources */,

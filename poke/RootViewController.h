@@ -12,9 +12,7 @@
 #import "MainView.h"
 @interface RootViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate,DataHandlerDelegate>
 {
-    UITableView*tbl;
     
-    NSMutableArray*list;
     NSMutableArray*friends;
     NSMutableArray*lendings;
     

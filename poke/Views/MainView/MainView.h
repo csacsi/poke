@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NewLend.h"
 #import "AddAndSearchFriendsViewController.h"
+#import "ItemsView.h"
 @class MainView;
 
 
@@ -29,7 +30,7 @@
     NewLend*topView;
     AddAndSearchFriendsViewController *bottomViewController;
     UIView*leftView;
-    UIView*rightView;
+    ItemsView*rightView;
     
     UIImageView * dummyView;
     CGRect originalRect;

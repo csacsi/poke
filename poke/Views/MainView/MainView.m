@@ -51,10 +51,20 @@
         [bottomViewController.view setFrame:CGRectMake(bottomButton.center.x-defaultBtnSize/3.5, bottomButton.frame.origin.y, screenWidth/(screenHeight/defaultBtnSize), screenHeight/(screenHeight/defaultBtnSize))];
         [bottomViewController.view setAlpha:0];
         [self addSubview:bottomViewController.view];
+        NSLog(@"%@",NSStringFromCGRect(bottomViewController.view.frame));
         
         
 
-        rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        rightView = [[ItemsView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        [rightView setBackgroundColor:[UIColor purpleColor]];
+        rightView.layer.anchorPoint = CGPointMake(rightButton.frame.origin.x/self.frame.size.width, rightButton.frame.origin.y/self.frame.size.height);
+        [rightView setFrame:CGRectMake(rightButton.center.x-defaultBtnSize/3.5, rightButton.frame.origin.y,screenWidth/(screenHeight/defaultBtnSize) ,screenHeight/(screenHeight/defaultBtnSize))];
+        
+        NSLog(@"%@",NSStringFromCGRect(rightView.frame));
+        [rightView setAlpha:1];
+        [self addSubview:rightView];
+
+        
         leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         
         
@@ -110,12 +120,14 @@
             else if (CGRectContainsPoint(leftButton.frame, location))
             {
                 NSLog(@"Left function");
+                
                 [leftButton setBackgroundColor:[UIColor redColor]];
             }
             else if (CGRectContainsPoint(rightButton.frame, location))
             {
                 NSLog(@"Right function");
                 [rightButton setBackgroundColor:[UIColor redColor]];
+                [self switchToView:rightView fromBtn:rightButton];
             }
             [UIView animateWithDuration:0.5 animations:^{
                 [rightButton setBackgroundColor:[UIColor blueColor]];
@@ -141,6 +153,7 @@
 }
 -(void)switchToView:(UIView*)view fromBtn:(UIView*)btn
 {
+    [self bringSubviewToFront:view];
     [grabbedBtn setAlpha:0];
     btn.alpha = 0;
     originalRect= view.frame;

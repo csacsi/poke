@@ -71,40 +71,7 @@
         [self initParse];
     
     if ([PFUser currentUser]) {
-        Friend *csacsi = [[Friend alloc]init];
-        [csacsi setName:@"Toth Csaba"];
-        [csacsi setEmail:@"huncsacsika@gmail.com"];
-        [csacsi setPhoneNumber:@"+36304724243"];
-        
-        Friend * csomak = [[Friend alloc]init];
-        [csomak setName:@"Csomak Gabor"];
-        [csomak setEmail:@"csomakk@gmail.com"];
-        [csomak setPhoneNumber:@"+36303211232"];
-        
-        LendInteraction * lendone = [[LendInteraction alloc]init];
-        [lendone setName:@"Lord of the rings"];
-        [lendone setCategoryType: lendCategoryBook];
-        [lendone setAmount:@1];
-        [lendone setStatus:100.0];
-        [lendone setFriend:csomak];
-        [lendone setUser:[PFUser currentUser]];
-        
-        LendInteraction*lendTwo = [[LendInteraction alloc]init];
-        [lendTwo setName:@"Lunch"];
-        [lendTwo setCategoryType:lendCategoryCash];
-        [lendTwo setAmount:@1200];
-        [lendTwo setStatus:1.0];
-        [lendTwo setFriend:csacsi];
-        [lendTwo setUser:[PFUser currentUser]];
-        
-        
-        friends = @[csacsi,csomak].mutableCopy;
-        list = @[lendTwo, lendone].mutableCopy;
-        [list sortUsingComparator:^NSComparisonResult(LendInteraction* obj1, LendInteraction* obj2) {
-            return obj1 .status<obj2.status;
-        }];
-        
-        [tbl reloadData];
+       
 //        ParseDataHandler* ph = [[ParseDataHandler alloc]init];
 //        
 //        [ph saveArrayInBackground:@[csacsi,csomak,lendone,lendTwo] completionBlock:^(BOOL succeeded, NSError *error) {
@@ -121,26 +88,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return list.count;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
-}
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainTableCell* cell = [tableView dequeueReusableCellWithIdentifier:@"mainCell"];
-    int number = indexPath.row;
-    [cell setModel:list[number]];
-    
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"tableview selected:%d",indexPath.row);
-}
 
 #pragma mark parse delegate methods
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
