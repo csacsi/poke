@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import <Parse/PFObject.h>
 
-@class PFObject;
 @class BaseDataObject;
 
 @protocol CustomMappingProtocoll <NSObject>

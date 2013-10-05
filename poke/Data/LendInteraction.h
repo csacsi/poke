@@ -8,19 +8,27 @@
 
 #import "BaseDataObject.h"
 #import "Friend.h"
+#import <Parse/Parse.h>
+typedef enum {
+    lendCategoryBook,
+    lendCategoryCash,
+    lendCategoryClothes,
+    lendCategoryOther
+} lendInteractionCateoryType;
 
 @interface LendInteraction : BaseDataObject
 
-@property NSInteger id;
-@property NSInteger category_group_id;
-@property NSString *description;
-@property NSNumber *amount;
-@property NSObject *photo;
-@property NSInteger status;
+@property lendInteractionCateoryType categoryType;
 @property Friend *friend;
+@property NSString *name;
+@property NSNumber *amount;
+@property UIImage *photo;
+@property double status;
+
 @property BOOL isBorrow;
 @property NSDate *end_date;
-
+@property (nonatomic,strong)NSString* objectId;
+@property PFUser* user;
 -(BOOL) isLend;
 
 

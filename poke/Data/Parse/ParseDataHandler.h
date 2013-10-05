@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataLoaderProtocol.h"
+#import "BaseDataHandler.h"
 
-
-@interface ParseDataHandler : NSObject<DataLoaderProtocol>
-{
-    NSMutableDictionary* errorsDictionary;
-}
-
+@interface ParseDataHandler : BaseDataHandler
 
 @end

@@ -23,10 +23,6 @@
 		F23AD98517FF17DC00C181FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F23AD98317FF17DC00C181FF /* InfoPlist.strings */; };
 		F23AD98717FF17DC00C181FF /* pokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD98617FF17DC00C181FF /* pokeTests.m */; };
 		F23AD99317FF1A0500C181FF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD99117FF1A0500C181FF /* Parse.framework */; };
-		F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99617FF1A2400C181FF /* BaseDataObject.m */; };
-		F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */; };
-		F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */; };
-		F23AD9A517FF1A2400C181FF /* OOSQLiteWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */; };
 		F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9A717FF1A4600C181FF /* RootViewController.m */; };
 		F23AD9B417FF1AD300C181FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AA17FF1AD300C181FF /* AdSupport.framework */; };
 		F23AD9B517FF1AD300C181FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9AB17FF1AD300C181FF /* AVFoundation.framework */; };
@@ -45,6 +41,16 @@
 		F23AD9C717FF1DC300C181FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C617FF1DC300C181FF /* QuartzCore.framework */; };
 		F23AD9C917FF1E7100C181FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */; };
 		F23AD9CE17FF2F1200C181FF /* MainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9CD17FF2F1200C181FF /* MainTableCell.m */; };
+		F23AD9D317FF49FE00C181FF /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9D217FF49FE00C181FF /* UIColor+Utils.m */; };
+		F23AD9E217FF514000C181FF /* BaseDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9D917FF514000C181FF /* BaseDataHandler.m */; };
+		F23AD9E317FF514000C181FF /* BaseDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9DB17FF514000C181FF /* BaseDataObject.m */; };
+		F23AD9E417FF514000C181FF /* CompositeDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9DE17FF514000C181FF /* CompositeDataHandler.m */; };
+		F23AD9F317FF519000C181FF /* ParseDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9E817FF519000C181FF /* ParseDataHandler.m */; };
+		F23AD9F417FF519000C181FF /* ParseObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9EA17FF519000C181FF /* ParseObjectHelper.m */; };
+		F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9F017FF519000C181FF /* QueryConstrains.m */; };
+		F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD9F217FF519000C181FF /* SQLiteDataHandler.m */; };
+		F24E612B17FF64840048254B /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612A17FF64840048254B /* MainView.m */; };
+		F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,17 +87,6 @@
 		F23AD98417FF17DC00C181FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F23AD98617FF17DC00C181FF /* pokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pokeTests.m; sourceTree = "<group>"; };
 		F23AD99117FF1A0500C181FF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = poke/Parse.framework; sourceTree = "<group>"; };
-		F23AD99517FF1A2400C181FF /* BaseDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataObject.h; sourceTree = "<group>"; };
-		F23AD99617FF1A2400C181FF /* BaseDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataObject.m; sourceTree = "<group>"; };
-		F23AD99717FF1A2400C181FF /* DataRowProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRowProtocoll.h; sourceTree = "<group>"; };
-		F23AD99917FF1A2400C181FF /* CustomMappingProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMappingProtocoll.h; sourceTree = "<group>"; };
-		F23AD99A17FF1A2400C181FF /* ParseDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDataHandler.h; sourceTree = "<group>"; };
-		F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDataHandler.m; sourceTree = "<group>"; };
-		F23AD99C17FF1A2400C181FF /* ParseObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseObjectHelper.h; sourceTree = "<group>"; };
-		F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseObjectHelper.m; sourceTree = "<group>"; };
-		F23AD99F17FF1A2400C181FF /* DataLoaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoaderProtocol.h; sourceTree = "<group>"; };
-		F23AD9A017FF1A2400C181FF /* OOSQLiteWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSQLiteWrapper.h; sourceTree = "<group>"; };
-		F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOSQLiteWrapper.m; sourceTree = "<group>"; };
 		F23AD9A617FF1A4600C181FF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F23AD9A717FF1A4600C181FF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F23AD9AA17FF1AD300C181FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -112,6 +107,34 @@
 		F23AD9C817FF1E7100C181FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F23AD9CC17FF2F1200C181FF /* MainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableCell.h; path = Views/Cell/MainTableCell.h; sourceTree = "<group>"; };
 		F23AD9CD17FF2F1200C181FF /* MainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableCell.m; path = Views/Cell/MainTableCell.m; sourceTree = "<group>"; };
+		F23AD9D117FF49FE00C181FF /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
+		F23AD9D217FF49FE00C181FF /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		F23AD9D817FF514000C181FF /* BaseDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataHandler.h; sourceTree = "<group>"; };
+		F23AD9D917FF514000C181FF /* BaseDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataHandler.m; sourceTree = "<group>"; };
+		F23AD9DA17FF514000C181FF /* BaseDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataObject.h; sourceTree = "<group>"; };
+		F23AD9DB17FF514000C181FF /* BaseDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataObject.m; sourceTree = "<group>"; };
+		F23AD9DC17FF514000C181FF /* BaseDataObjectProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataObjectProtocoll.h; sourceTree = "<group>"; };
+		F23AD9DD17FF514000C181FF /* CompositeDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeDataHandler.h; sourceTree = "<group>"; };
+		F23AD9DE17FF514000C181FF /* CompositeDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeDataHandler.m; sourceTree = "<group>"; };
+		F23AD9DF17FF514000C181FF /* DataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
+		F23AD9E017FF514000C181FF /* DataRowProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRowProtocoll.h; sourceTree = "<group>"; };
+		F23AD9E617FF519000C181FF /* CustomMappingProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMappingProtocoll.h; sourceTree = "<group>"; };
+		F23AD9E717FF519000C181FF /* ParseDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDataHandler.h; sourceTree = "<group>"; };
+		F23AD9E817FF519000C181FF /* ParseDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDataHandler.m; sourceTree = "<group>"; };
+		F23AD9E917FF519000C181FF /* ParseObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseObjectHelper.h; sourceTree = "<group>"; };
+		F23AD9EA17FF519000C181FF /* ParseObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseObjectHelper.m; sourceTree = "<group>"; };
+		F23AD9EC17FF519000C181FF /* DataHandlerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandlerDelegate.h; sourceTree = "<group>"; };
+		F23AD9ED17FF519000C181FF /* DataHandlerProtocoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandlerProtocoll.h; sourceTree = "<group>"; };
+		F23AD9EE17FF519000C181FF /* DataLoaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoaderProtocol.h; sourceTree = "<group>"; };
+		F23AD9EF17FF519000C181FF /* QueryConstrains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryConstrains.h; sourceTree = "<group>"; };
+		F23AD9F017FF519000C181FF /* QueryConstrains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConstrains.m; sourceTree = "<group>"; };
+		F23AD9F117FF519000C181FF /* SQLiteDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDataHandler.h; sourceTree = "<group>"; };
+		F23AD9F217FF519000C181FF /* SQLiteDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteDataHandler.m; sourceTree = "<group>"; };
+		F23AD9F717FF523A00C181FF /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		F24E612917FF64840048254B /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Views/MainView/MainView.h; sourceTree = "<group>"; };
+		F24E612A17FF64840048254B /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Views/MainView/MainView.m; sourceTree = "<group>"; };
+		F24E612E17FF88AD0048254B /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,10 +243,12 @@
 			isa = PBXGroup;
 			children = (
 				E898828117FF2E4D00180448 /* Model */,
+				F23AD9CF17FF49FE00C181FF /* Utils */,
 				F23AD9CA17FF2EDF00C181FF /* Views */,
 				F23AD99417FF1A2400C181FF /* Data */,
 				F23AD96717FF17DB00C181FF /* AppDelegate.h */,
 				F23AD96817FF17DB00C181FF /* AppDelegate.m */,
+				F23AD9F717FF523A00C181FF /* constants.h */,
 				F23AD9A917FF1A4B00C181FF /* ViewControllers */,
 				F23AD97317FF17DB00C181FF /* Images.xcassets */,
 				F23AD95F17FF17DB00C181FF /* Supporting Files */,
@@ -263,35 +288,19 @@
 		F23AD99417FF1A2400C181FF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F23AD99517FF1A2400C181FF /* BaseDataObject.h */,
-				F23AD99617FF1A2400C181FF /* BaseDataObject.m */,
-				F23AD99717FF1A2400C181FF /* DataRowProtocoll.h */,
-				F23AD99817FF1A2400C181FF /* Parse */,
-				F23AD99E17FF1A2400C181FF /* SQLite */,
+				F23AD9D817FF514000C181FF /* BaseDataHandler.h */,
+				F23AD9D917FF514000C181FF /* BaseDataHandler.m */,
+				F23AD9DA17FF514000C181FF /* BaseDataObject.h */,
+				F23AD9DB17FF514000C181FF /* BaseDataObject.m */,
+				F23AD9DC17FF514000C181FF /* BaseDataObjectProtocoll.h */,
+				F23AD9DD17FF514000C181FF /* CompositeDataHandler.h */,
+				F23AD9DE17FF514000C181FF /* CompositeDataHandler.m */,
+				F23AD9DF17FF514000C181FF /* DataLayer.h */,
+				F23AD9E517FF519000C181FF /* Parse */,
+				F23AD9EB17FF519000C181FF /* SQLite */,
+				F23AD9E017FF514000C181FF /* DataRowProtocoll.h */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		F23AD99817FF1A2400C181FF /* Parse */ = {
-			isa = PBXGroup;
-			children = (
-				F23AD99917FF1A2400C181FF /* CustomMappingProtocoll.h */,
-				F23AD99A17FF1A2400C181FF /* ParseDataHandler.h */,
-				F23AD99B17FF1A2400C181FF /* ParseDataHandler.m */,
-				F23AD99C17FF1A2400C181FF /* ParseObjectHelper.h */,
-				F23AD99D17FF1A2400C181FF /* ParseObjectHelper.m */,
-			);
-			path = Parse;
-			sourceTree = "<group>";
-		};
-		F23AD99E17FF1A2400C181FF /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				F23AD99F17FF1A2400C181FF /* DataLoaderProtocol.h */,
-				F23AD9A017FF1A2400C181FF /* OOSQLiteWrapper.h */,
-				F23AD9A117FF1A2400C181FF /* OOSQLiteWrapper.m */,
-			);
-			path = SQLite;
 			sourceTree = "<group>";
 		};
 		F23AD9A917FF1A4B00C181FF /* ViewControllers */ = {
@@ -307,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F23AD9CB17FF2EEF00C181FF /* Cell */,
+				F24E612C17FF64890048254B /* MainView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,6 +328,69 @@
 				F23AD9CD17FF2F1200C181FF /* MainTableCell.m */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		F23AD9CF17FF49FE00C181FF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F24E612D17FF88AD0048254B /* NSTimer */,
+				F23AD9D017FF49FE00C181FF /* UIColor */,
+			);
+			name = Utils;
+			path = poke/Utils;
+			sourceTree = SOURCE_ROOT;
+		};
+		F23AD9D017FF49FE00C181FF /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9D117FF49FE00C181FF /* UIColor+Utils.h */,
+				F23AD9D217FF49FE00C181FF /* UIColor+Utils.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		F23AD9E517FF519000C181FF /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9E617FF519000C181FF /* CustomMappingProtocoll.h */,
+				F23AD9E717FF519000C181FF /* ParseDataHandler.h */,
+				F23AD9E817FF519000C181FF /* ParseDataHandler.m */,
+				F23AD9E917FF519000C181FF /* ParseObjectHelper.h */,
+				F23AD9EA17FF519000C181FF /* ParseObjectHelper.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		F23AD9EB17FF519000C181FF /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				F23AD9EC17FF519000C181FF /* DataHandlerDelegate.h */,
+				F23AD9ED17FF519000C181FF /* DataHandlerProtocoll.h */,
+				F23AD9EE17FF519000C181FF /* DataLoaderProtocol.h */,
+				F23AD9EF17FF519000C181FF /* QueryConstrains.h */,
+				F23AD9F017FF519000C181FF /* QueryConstrains.m */,
+				F23AD9F117FF519000C181FF /* SQLiteDataHandler.h */,
+				F23AD9F217FF519000C181FF /* SQLiteDataHandler.m */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		F24E612C17FF64890048254B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				F24E612917FF64840048254B /* MainView.h */,
+				F24E612A17FF64840048254B /* MainView.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		F24E612D17FF88AD0048254B /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				F24E612E17FF88AD0048254B /* NSTimer+Blocks.h */,
+				F24E612F17FF88AD0048254B /* NSTimer+Blocks.m */,
+			);
+			path = NSTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,17 +489,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23AD9A517FF1A2400C181FF /* OOSQLiteWrapper.m in Sources */,
 				F23AD9A817FF1A4600C181FF /* RootViewController.m in Sources */,
 				F23AD96917FF17DB00C181FF /* AppDelegate.m in Sources */,
 				E898828417FF2EC800180448 /* Profile.m in Sources */,
 				E898828017FF2E4500180448 /* Friend.m in Sources */,
+				F23AD9F417FF519000C181FF /* ParseObjectHelper.m in Sources */,
+				F24E612B17FF64840048254B /* MainView.m in Sources */,
+				F23AD9F617FF519000C181FF /* SQLiteDataHandler.m in Sources */,
 				F23AD96517FF17DB00C181FF /* main.m in Sources */,
-				F23AD9A317FF1A2400C181FF /* ParseDataHandler.m in Sources */,
+				F23AD9F517FF519000C181FF /* QueryConstrains.m in Sources */,
+				F23AD9E317FF514000C181FF /* BaseDataObject.m in Sources */,
+				F23AD9E417FF514000C181FF /* CompositeDataHandler.m in Sources */,
+				F23AD9D317FF49FE00C181FF /* UIColor+Utils.m in Sources */,
+				F23AD9F317FF519000C181FF /* ParseDataHandler.m in Sources */,
+				F23AD9E217FF514000C181FF /* BaseDataHandler.m in Sources */,
 				E898828A17FF2F4E00180448 /* LendInteraction.m in Sources */,
-				F23AD9A417FF1A2400C181FF /* ParseObjectHelper.m in Sources */,
-				F23AD9A217FF1A2400C181FF /* BaseDataObject.m in Sources */,
 				F23AD9CE17FF2F1200C181FF /* MainTableCell.m in Sources */,
+				F24E613017FF88AD0048254B /* NSTimer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

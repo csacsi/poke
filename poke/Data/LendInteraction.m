@@ -10,6 +10,21 @@
 
 @implementation LendInteraction
 
+-(void) setRowId:(id<NSCopying>)rowId
+{
+    self.objectId = (NSString*)rowId;
+}
+
+-(id<NSCopying>)getRowId
+{
+    return self.objectId;
+}
+
++(NSString*) getRowIdName
+{
+    return @"objectId";
+}
+
 -(BOOL) isLend
 {
     return !_isBorrow;

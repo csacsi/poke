@@ -10,6 +10,7 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
+#import "NSTimer+Blocks.h"
 
 #define isiPad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 

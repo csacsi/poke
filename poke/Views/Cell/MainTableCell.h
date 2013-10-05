@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LendInteraction.h"
 
 @interface MainTableCell : UITableViewCell
+
+@property (nonatomic,strong)LendInteraction*model;
 
 @end

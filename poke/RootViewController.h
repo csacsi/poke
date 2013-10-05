@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
-@interface RootViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate>
+#import "ParseDataHandler.h"
+#import "MainView.h"
+@interface RootViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate,DataHandlerDelegate>
 {
     UITableView*tbl;
     
     NSMutableArray*list;
+    NSMutableArray*friends;
+    NSMutableArray*lendings;
+    
+    MainView* mainView;
 }
+
 
 @end

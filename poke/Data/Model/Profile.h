@@ -12,6 +12,6 @@
 
 @property NSInteger id;
 @property NSNumber *defaultDuration;
-
+@property (nonatomic,strong)NSString* objectId;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DataRowProtocoll.h"
 /**
     Helper to handle application model <-> PFObject conversations
  */
@@ -22,7 +22,7 @@
     @param object a BaseDataObject
     @return the PFObject
  */
-+(PFObject*) parseObjectFrom:(BaseDataObject*)object;
++(PFObject*) parseObjectFrom:(BaseDataObject<DataRowProtocoll>*)object;
 
 /**
      objectFrom: Creates BaseDataObject from a given PFObject

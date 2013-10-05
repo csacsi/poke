@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "MainTableCell.h"
 
+#import "LendInteraction.h"
 
 @interface RootViewController ()
 
@@ -22,14 +23,17 @@
     if (self) {
         
         // Custom initialization
-        [self.view setBackgroundColor:[UIColor redColor]];
-        tbl = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        [tbl setDataSource:self];
-        [tbl setContentInset:UIEdgeInsetsMake(60, 0, 0, 0)];
-        [tbl  setDelegate:self];
-        [self.view addSubview:tbl];
-        [tbl registerClass:[MainTableCell class] forCellReuseIdentifier:@"mainCell"];
-        list = @[@"elso",@"masodik",@"harmadik"].mutableCopy;
+//        [self.view setBackgroundColor:[UIColor redColor]];
+//        tbl = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+//        [tbl setDataSource:self];
+//        [tbl setContentInset:UIEdgeInsetsMake(60, 0, 0, 0)];
+//        [tbl  setDelegate:self];
+//        [self.view addSubview:tbl];
+//        [tbl registerClass:[MainTableCell class] forCellReuseIdentifier:@"mainCell"];
+//        list = @[].mutableCopy;
+        
+        mainView = [[MainView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        [self.view addSubview:mainView];
         
         
     }
@@ -65,6 +69,51 @@
 -(void)viewDidAppear:(BOOL)animated
 {
         [self initParse];
+    
+    if ([PFUser currentUser]) {
+        Friend *csacsi = [[Friend alloc]init];
+        [csacsi setName:@"Toth Csaba"];
+        [csacsi setEmail:@"huncsacsika@gmail.com"];
+        [csacsi setPhoneNumber:@"+36304724243"];
+        
+        Friend * csomak = [[Friend alloc]init];
+        [csomak setName:@"Csomak Gabor"];
+        [csomak setEmail:@"csomakk@gmail.com"];
+        [csomak setPhoneNumber:@"+36303211232"];
+        
+        LendInteraction * lendone = [[LendInteraction alloc]init];
+        [lendone setName:@"Lord of the rings"];
+        [lendone setCategoryType: lendCategoryBook];
+        [lendone setAmount:@1];
+        [lendone setStatus:100.0];
+        [lendone setFriend:csomak];
+        [lendone setUser:[PFUser currentUser]];
+        
+        LendInteraction*lendTwo = [[LendInteraction alloc]init];
+        [lendTwo setName:@"Lunch"];
+        [lendTwo setCategoryType:lendCategoryCash];
+        [lendTwo setAmount:@1200];
+        [lendTwo setStatus:1.0];
+        [lendTwo setFriend:csacsi];
+        [lendTwo setUser:[PFUser currentUser]];
+        
+        
+        friends = @[csacsi,csomak].mutableCopy;
+        list = @[lendTwo, lendone].mutableCopy;
+        [list sortUsingComparator:^NSComparisonResult(LendInteraction* obj1, LendInteraction* obj2) {
+            return obj1 .status<obj2.status;
+        }];
+        
+        [tbl reloadData];
+//        ParseDataHandler* ph = [[ParseDataHandler alloc]init];
+//        
+//        [ph saveArrayInBackground:@[csacsi,csomak,lendone,lendTwo] completionBlock:^(BOOL succeeded, NSError *error) {
+//            if (!succeeded) {
+//                NSLog(@"Baj van babam");
+//            }
+//        }];
+    }
+    
 }
 - (void)didReceiveMemoryWarning
 {
@@ -78,12 +127,12 @@
     return list.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+    return 60;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableCell* cell = [tableView dequeueReusableCellWithIdentifier:@"mainCell"];
-    
-    [cell setText:list[indexPath.row]];
+    int number = indexPath.row;
+    [cell setModel:list[number]];
     
     return cell;
 }
@@ -160,5 +209,9 @@
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
 }
+
+#pragma mark parsedataHandlerDelegate
+
+
 
 @end

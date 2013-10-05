@@ -10,9 +10,10 @@
 
 @interface Friend : BaseDataObject
 
-@property NSInteger id;
 @property NSString *name;
-@property NSObject *contactListItem;
-
+@property UIImage *picture;
+@property NSString* phoneNumber;
+@property NSString* email;
+@property (nonatomic,strong)NSString* objectId;
 
 @end

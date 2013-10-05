@@ -7,34 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseDataObjectProtocoll.h"
 
 /**
     Base object for handling properties dynamically
  */
 
-@interface BaseDataObject : NSObject
-
-/**
-    objectForKeyedSubscript: Built in solution enhance and object with directory keying ability
-    @param key the property name
-    @return the property value wrapped in an object
- 
-    @usage NSString* name = person[@"name"];
- */
-- (id)objectForKeyedSubscript:(id)key;
-
-/**
-     setObject: forKeyedSubscript: Built in solution enhance and object with directory keying ability
-     @param obj the object to store
-     @param key the property name
-     
-     @usage person[@"name"] = @"Distinction";
- */
-- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key;
-
-/**
-    objectAsDictionary: Create an NSDictionary from the object
- */
--(NSDictionary*)objectAsDictionary;
+@interface BaseDataObject : NSObject <BaseDataObjectProtocoll>
 
 @end

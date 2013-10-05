@@ -104,7 +104,7 @@
     //If it is a subclass of BaseDataObject, continue with superclass
     if(klass != [BaseDataObject class])
     {
-        NSDictionary* superObjectProperties = [BaseDataObject propertyListOfClass:[super class]];
+        NSDictionary* superObjectProperties = [BaseDataObject propertyListOfClass:klass.superclass];
         [propertyDictionary addEntriesFromDictionary:superObjectProperties];
     }
     

@@ -10,7 +10,20 @@
 
 @implementation Profile
 
+-(void) setRowId:(id<NSCopying>)rowId
+{
+    self.objectId = (NSString*)rowId;
+}
 
+-(id<NSCopying>)getRowId
+{
+    return self.objectId;
+}
+
++(NSString*) getRowIdName
+{
+    return @"objectId";
+}
 
 
 @end

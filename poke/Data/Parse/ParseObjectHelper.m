@@ -14,7 +14,7 @@
 
 @implementation ParseObjectHelper
 
-+(PFObject*) parseObjectFrom:(BaseDataObject*)obj
++(PFObject*) parseObjectFrom:(BaseDataObject<DataRowProtocoll>*)obj
 {
     //Create base PFObject
     PFObject *object = [PFObject objectWithClassName:NSStringFromClass([obj class])];
@@ -41,14 +41,13 @@
             NSString *propertyName = propName;
             id value = [obj valueForKey:propertyName];
             
+            if (!value)
+                continue;
+            
             value = [self parseValueFromElement:value]; //will recursievely process value
             
-            //Give ability to present nullifying
-            if (!value)
-                value = [NSNull null];
-            
-            //this string should be replaced with the persistence protocoll call alter
-            if (![propName isEqualToString:@"objectId"])
+            //Only set the value if the property anme is not the rowID and the value is not null
+            if (!([value isKindOfClass:[NSNull class]] && [propName isEqualToString:[[obj class] getRowIdName]]))
                 [object setValue:value forKey:propertyName];
         }
     }
@@ -67,7 +66,7 @@
     
     if ([obj isKindOfClass:[BaseDataObject class]])//Nested object, recursively convert
     {
-        parseValue = [self parseObjectFrom:(BaseDataObject*)obj];
+        parseValue = [self parseObjectFrom:(BaseDataObject<DataRowProtocoll>*)obj];
     }
     else if([obj isKindOfClass:[NSArray class]])//Its an array, convert each element
     {
